@@ -19,12 +19,13 @@ import {
   type CameraState,
 } from '@engine/camera/panZoom';
 import { CAMERA } from '@engine/gameplay/constants';
-import { devHitClipPath, objectCenter } from '@engine/gameplay/hitShape';
+import { devHitClipPath, objectCenter, objectMarkSize } from '@engine/gameplay/hitShape';
 import {
   getActiveListObjects,
   getHintArea,
   getObjectDisplayName,
   hitTest,
+  isObjectConfigured,
   pickHintTarget,
   selectObjectsForBoard,
 } from '@engine/gameplay/objects';
@@ -55,6 +56,7 @@ import {
 import type { BoardObject } from '@engine/types';
 import { useSave } from '../../context/SaveContext';
 import { FindStarBurst } from '@ui/components/FindStarBurst';
+import { FoundObjectMark } from '@ui/components/FoundObjectMark';
 import { BoardCompleteSplash } from '@ui/components/BoardCompleteSplash';
 import { FullscreenToggle } from '@ui/components/FullscreenToggle';
 
@@ -120,6 +122,14 @@ export function GameplayScreen() {
   const listObjects = useMemo(
     () => getActiveListObjects(activeObjects),
     [activeObjects],
+  );
+
+  const foundSceneObjects = useMemo(
+    () =>
+      activeObjects.filter(
+        (obj) => session.foundIds.has(obj.id) && isObjectConfigured(obj),
+      ),
+    [activeObjects, session.foundIds],
   );
 
   const remaining = listObjects.filter((o) => !session.foundIds.has(o.id)).length;
@@ -533,6 +543,17 @@ export function GameplayScreen() {
                 }}
               />
             ) : null}
+            {foundSceneObjects.map((obj) => {
+              const center = objectCenter(obj.bounds);
+              return (
+                <FoundObjectMark
+                  key={obj.id}
+                  x={center.x}
+                  y={center.y}
+                  size={objectMarkSize(obj.bounds)}
+                />
+              );
+            })}
             {findBursts.map((burst) => (
               <div
                 key={burst.key}

@@ -97,3 +97,9 @@ export function objectCenter(bounds: HitBounds): { x: number; y: number } {
     y: bounds.y + bounds.height / 2,
   };
 }
+
+/** Scene-space size for a found-object mark, scaled to the hit area. */
+export function objectMarkSize(bounds: HitBounds): number {
+  const base = Math.max(bounds.width, bounds.height) * 0.72;
+  return Math.min(96, Math.max(28, base));
+}

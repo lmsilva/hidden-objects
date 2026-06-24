@@ -705,6 +705,37 @@ a {
   box-shadow: 0 0 0 2px rgba(126, 184, 122, 0.45);
 }
 
+.found-object-mark {
+  position: absolute;
+  pointer-events: none;
+  z-index: 12;
+  transform: translate(-50%, -50%);
+  color: #d64545;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.75));
+  animation: found-mark-pop 0.28s ease-out;
+}
+
+.found-object-mark svg {
+  display: block;
+}
+
+.found-object-mark line {
+  stroke: currentColor;
+  stroke-width: 3.25;
+  stroke-linecap: round;
+}
+
+@keyframes found-mark-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+  100% {
+    opacity: 0.92;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .find-star-anchor {
   position: absolute;
   pointer-events: none;
