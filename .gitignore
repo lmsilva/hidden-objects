@@ -30,3 +30,6 @@ public/adventures/the-lost-line/backgrounds/**
 
 # Object sprite packs (baked into board art; re-extract via npm run assets:setup)
 public/adventures/the-lost-line/objects/
+
+# Midjourney source renders — not used in-game (saves ~60MB on Pages deploys)
+public/adventures/the-lost-line/backgrounds/boards/*_source.png
