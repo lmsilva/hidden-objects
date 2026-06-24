@@ -1,0 +1,201 @@
+{
+  "boardId": "ch01_board03",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_departures_board",
+      "labelKey": "objects.departures_board",
+      "displayName": "Departures Board",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 720,
+        "y": 280,
+        "width": 80,
+        "height": 56
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_mosaic_roundel",
+      "labelKey": "objects.mosaic_roundel",
+      "displayName": "Mosaic Roundel",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 960,
+        "y": 180,
+        "width": 64,
+        "height": 64
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_suitcase",
+      "labelKey": "objects.suitcase",
+      "displayName": "Suitcase",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 380,
+        "y": 620,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_bouquet",
+      "labelKey": "objects.bouquet",
+      "displayName": "Bouquet",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 540,
+        "y": 740,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_transit_map",
+      "labelKey": "objects.transit_map",
+      "displayName": "Transit Map",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1100,
+        "y": 520,
+        "width": 72,
+        "height": 56
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_coin_purse",
+      "labelKey": "objects.coin_purse",
+      "displayName": "Coin Purse",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1280,
+        "y": 680,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_crumpled_note",
+      "labelKey": "objects.crumpled_note",
+      "displayName": "Crumpled Note",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1420,
+        "y": 560,
+        "width": 40,
+        "height": 36
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_broken_umbrella",
+      "labelKey": "objects.broken_umbrella",
+      "displayName": "Broken Umbrella",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1560,
+        "y": 740,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_photo_booth_strip",
+      "labelKey": "objects.photo_booth_strip",
+      "displayName": "Photo Booth Strip",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 200,
+        "y": 480,
+        "width": 36,
+        "height": 64
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_seal_wax",
+      "labelKey": "objects.seal_wax",
+      "displayName": "Seal Wax",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 860,
+        "y": 820,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1780,
+        "y": 480,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 440,
+        "y": 360,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 1320,
+        "y": 840,
+        "width": 40,
+        "height": 40
+      },
+      "configured": true
+    }
+  ]
+}

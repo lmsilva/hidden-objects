@@ -1,0 +1,201 @@
+{
+  "boardId": "ch02_board01",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_lantern_string",
+      "labelKey": "objects.lantern_string",
+      "displayName": "Lantern String",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 400,
+        "y": 200,
+        "width": 80,
+        "height": 40
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_noodle_bowl",
+      "labelKey": "objects.noodle_bowl",
+      "displayName": "Noodle Bowl",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 620,
+        "y": 580,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_violin_case",
+      "labelKey": "objects.violin_case",
+      "displayName": "Violin Case",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 880,
+        "y": 640,
+        "width": 72,
+        "height": 48
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_spice_jar",
+      "labelKey": "objects.spice_jar",
+      "displayName": "Spice Jar",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1040,
+        "y": 520,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_folding_fan",
+      "labelKey": "objects.folding_fan",
+      "displayName": "Folding Fan",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1220,
+        "y": 700,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_merchant_scale",
+      "labelKey": "objects.merchant_scale",
+      "displayName": "Merchant Scale",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1400,
+        "y": 480,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_paper_lantern",
+      "labelKey": "objects.paper_lantern",
+      "displayName": "Paper Lantern",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1580,
+        "y": 320,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_coin_pouch",
+      "labelKey": "objects.coin_pouch",
+      "displayName": "Coin Pouch",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 280,
+        "y": 720,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_wooden_sign",
+      "labelKey": "objects.wooden_sign",
+      "displayName": "Wooden Sign",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 500,
+        "y": 400,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_tea_kettle",
+      "labelKey": "objects.tea_kettle",
+      "displayName": "Tea Kettle",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1720,
+        "y": 600,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1800,
+        "y": 760,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 760,
+        "y": 380,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 1180,
+        "y": 820,
+        "width": 40,
+        "height": 40
+      },
+      "configured": true
+    }
+  ]
+}

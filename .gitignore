@@ -1,0 +1,32 @@
+# Dependencies & build
+node_modules/
+dist/
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs & caches
+*.log
+npm-debug.log*
+tools/assets-cache/
+
+# Source asset zips (re-download via npm run assets:setup; some exceed GitHub's 100MB limit)
+public/zipped_asset_downloads/
+
+# Raw itch.io extracts — only composited board PNGs are used in-game
+public/adventures/the-lost-line/backgrounds/**
+!public/adventures/the-lost-line/backgrounds/boards/
+!public/adventures/the-lost-line/backgrounds/boards/**
+
+# Object sprite packs (baked into board art; re-extract via npm run assets:setup)
+public/adventures/the-lost-line/objects/

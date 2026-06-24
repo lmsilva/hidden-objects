@@ -1,0 +1,2485 @@
+{
+  "sceneSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "boards": [
+    {
+      "id": "ch01_board01",
+      "chapterId": "ch01",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch01_board01.png",
+      "poolSize": 30,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_brass_scale",
+          "labelKey": "objects.brass_scale",
+          "displayName": "Brass Scale",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 567,
+            "y": 501,
+            "width": 215,
+            "height": 179,
+            "polygon": [
+              [
+                567,
+                544
+              ],
+              [
+                678,
+                501
+              ],
+              [
+                782,
+                535
+              ],
+              [
+                775,
+                675
+              ],
+              [
+                685,
+                680
+              ],
+              [
+                581,
+                660
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_timetable",
+          "labelKey": "objects.timetable",
+          "displayName": "Timetable",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1655,
+            "y": 169,
+            "width": 82,
+            "height": 140,
+            "polygon": [
+              [
+                1655,
+                169
+              ],
+              [
+                1726,
+                187
+              ],
+              [
+                1737,
+                309
+              ],
+              [
+                1661,
+                309
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_inkwell",
+          "labelKey": "objects.inkwell",
+          "displayName": "Inkwell",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 921,
+            "y": 597,
+            "width": 96,
+            "height": 94,
+            "polygon": [
+              [
+                957,
+                597
+              ],
+              [
+                1009,
+                609
+              ],
+              [
+                1017,
+                690
+              ],
+              [
+                921,
+                691
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_ticket_roll",
+          "labelKey": "objects.ticket_roll",
+          "displayName": "Ticket Roll",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 871,
+            "y": 936,
+            "width": 76,
+            "height": 67,
+            "polygon": [
+              [
+                871,
+                955
+              ],
+              [
+                906,
+                936
+              ],
+              [
+                947,
+                955
+              ],
+              [
+                947,
+                1003
+              ],
+              [
+                871,
+                1003
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_magnifying_glass",
+          "labelKey": "objects.magnifying_glass",
+          "displayName": "Magnifying Glass",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 967,
+            "y": 950,
+            "width": 121,
+            "height": 53,
+            "polygon": [
+              [
+                969,
+                950
+              ],
+              [
+                1085,
+                951
+              ],
+              [
+                1088,
+                1003
+              ],
+              [
+                967,
+                999
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_coffee_cup",
+          "labelKey": "objects.coffee_cup",
+          "displayName": "Coffee Cup",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1197,
+            "y": 773,
+            "width": 88,
+            "height": 83,
+            "polygon": [
+              [
+                1197,
+                773
+              ],
+              [
+                1285,
+                773
+              ],
+              [
+                1285,
+                856
+              ],
+              [
+                1197,
+                856
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_rubber_stamp",
+          "labelKey": "objects.rubber_stamp",
+          "displayName": "Rubber Stamp",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1101,
+            "y": 421,
+            "width": 27,
+            "height": 39,
+            "polygon": [
+              [
+                1101,
+                421
+              ],
+              [
+                1128,
+                421
+              ],
+              [
+                1128,
+                460
+              ],
+              [
+                1101,
+                460
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_pocket_watch",
+          "labelKey": "objects.pocket_watch",
+          "displayName": "Pocket Watch",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1464,
+            "y": 315,
+            "width": 49,
+            "height": 231,
+            "polygon": [
+              [
+                1489,
+                316
+              ],
+              [
+                1500,
+                315
+              ],
+              [
+                1513,
+                546
+              ],
+              [
+                1464,
+                539
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_postcard",
+          "labelKey": "objects.postcard",
+          "displayName": "Postcard",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_ledger",
+          "labelKey": "objects.ledger",
+          "displayName": "Ledger",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_tv_remote",
+          "labelKey": "objects.tv_remote",
+          "displayName": "TV Remote",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1428,
+            "y": 879,
+            "width": 173,
+            "height": 84,
+            "polygon": [
+              [
+                1428,
+                937
+              ],
+              [
+                1541,
+                879
+              ],
+              [
+                1601,
+                895
+              ],
+              [
+                1494,
+                963
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_yarn_ball",
+          "labelKey": "objects.yarn_ball",
+          "displayName": "Yarn Ball",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_analog_clock",
+          "labelKey": "objects.analog_clock",
+          "displayName": "Analog Clock",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1447,
+            "y": 189,
+            "width": 98,
+            "height": 128,
+            "polygon": [
+              [
+                1486,
+                189
+              ],
+              [
+                1502,
+                189
+              ],
+              [
+                1544,
+                260
+              ],
+              [
+                1545,
+                261
+              ],
+              [
+                1530,
+                317
+              ],
+              [
+                1465,
+                315
+              ],
+              [
+                1447,
+                261
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_calculator",
+          "labelKey": "objects.calculator",
+          "displayName": "Calculator",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_fountain_pen",
+          "labelKey": "objects.fountain_pen",
+          "displayName": "Fountain Pen",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_chopsticks",
+          "labelKey": "objects.chopsticks",
+          "displayName": "Chopsticks",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_house_slippers",
+          "labelKey": "objects.house_slippers",
+          "displayName": "House Slippers",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_brass_bell",
+          "labelKey": "objects.brass_bell",
+          "displayName": "Brass Bell",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_potted_plant",
+          "labelKey": "objects.potted_plant",
+          "displayName": "Potted Plant",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_world_map_poster",
+          "labelKey": "objects.world_map_poster",
+          "displayName": "World Map Poster",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_purple_umbrella",
+          "labelKey": "objects.purple_umbrella",
+          "displayName": "Purple Umbrella",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_door_keys",
+          "labelKey": "objects.door_keys",
+          "displayName": "Door Keys",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_rice_bowl",
+          "labelKey": "objects.rice_bowl",
+          "displayName": "Rice Bowl",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_desk_lamp",
+          "labelKey": "objects.desk_lamp",
+          "displayName": "Desk Lamp",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_transit_pass",
+          "labelKey": "objects.transit_pass",
+          "displayName": "Transit Pass",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_scissors",
+          "labelKey": "objects.scissors",
+          "displayName": "Scissors",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_tissue_box",
+          "labelKey": "objects.tissue_box",
+          "displayName": "Tissue Box",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_framed_photo",
+          "labelKey": "objects.framed_photo",
+          "displayName": "Framed Photo",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_sewing_kit",
+          "labelKey": "objects.sewing_kit",
+          "displayName": "Sewing Kit",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_teacup_saucer",
+          "labelKey": "objects.teacup_saucer",
+          "displayName": "Teacup & Saucer",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "configured": false,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch01_board02",
+      "chapterId": "ch01",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch01_board02.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_bench_plaque",
+          "labelKey": "objects.bench_plaque",
+          "displayName": "Bench Plaque",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 260,
+            "y": 680,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_vending_snack",
+          "labelKey": "objects.vending_snack",
+          "displayName": "Vending Snack",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 480,
+            "y": 520,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_loose_button",
+          "labelKey": "objects.loose_button",
+          "displayName": "Loose Button",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 620,
+            "y": 820,
+            "width": 32,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_newspaper",
+          "labelKey": "objects.newspaper",
+          "displayName": "Newspaper",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 800,
+            "y": 760,
+            "width": 56,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_enamel_sign",
+          "labelKey": "objects.enamel_sign",
+          "displayName": "Enamel Sign",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1020,
+            "y": 340,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_lost_scarf",
+          "labelKey": "objects.lost_scarf",
+          "displayName": "Lost Scarf",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1180,
+            "y": 640,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_coin",
+          "labelKey": "objects.coin",
+          "displayName": "Coin",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1320,
+            "y": 880,
+            "width": 28,
+            "height": 28
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_schedule_poster",
+          "labelKey": "objects.schedule_poster",
+          "displayName": "Schedule Poster",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1480,
+            "y": 400,
+            "width": 48,
+            "height": 64
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_glove",
+          "labelKey": "objects.glove",
+          "displayName": "Glove",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1680,
+            "y": 600,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_token_slot",
+          "labelKey": "objects.token_slot",
+          "displayName": "Token Slot",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 300,
+            "y": 440,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1720,
+            "y": 320,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 920,
+            "y": 480,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 560,
+            "y": 900,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch01_board03",
+      "chapterId": "ch01",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch01_board03.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_departures_board",
+          "labelKey": "objects.departures_board",
+          "displayName": "Departures Board",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 720,
+            "y": 280,
+            "width": 80,
+            "height": 56
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_mosaic_roundel",
+          "labelKey": "objects.mosaic_roundel",
+          "displayName": "Mosaic Roundel",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 960,
+            "y": 180,
+            "width": 64,
+            "height": 64
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_suitcase",
+          "labelKey": "objects.suitcase",
+          "displayName": "Suitcase",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 380,
+            "y": 620,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_bouquet",
+          "labelKey": "objects.bouquet",
+          "displayName": "Bouquet",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 540,
+            "y": 740,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_transit_map",
+          "labelKey": "objects.transit_map",
+          "displayName": "Transit Map",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1100,
+            "y": 520,
+            "width": 72,
+            "height": 56
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_coin_purse",
+          "labelKey": "objects.coin_purse",
+          "displayName": "Coin Purse",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1280,
+            "y": 680,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_crumpled_note",
+          "labelKey": "objects.crumpled_note",
+          "displayName": "Crumpled Note",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1420,
+            "y": 560,
+            "width": 40,
+            "height": 36
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_broken_umbrella",
+          "labelKey": "objects.broken_umbrella",
+          "displayName": "Broken Umbrella",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1560,
+            "y": 740,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_photo_booth_strip",
+          "labelKey": "objects.photo_booth_strip",
+          "displayName": "Photo Booth Strip",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 200,
+            "y": 480,
+            "width": 36,
+            "height": 64
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_seal_wax",
+          "labelKey": "objects.seal_wax",
+          "displayName": "Seal Wax",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 860,
+            "y": 820,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1780,
+            "y": 480,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 440,
+            "y": 360,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 1320,
+            "y": 840,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch02_board01",
+      "chapterId": "ch02",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch02_board01.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_lantern_string",
+          "labelKey": "objects.lantern_string",
+          "displayName": "Lantern String",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 400,
+            "y": 200,
+            "width": 80,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_noodle_bowl",
+          "labelKey": "objects.noodle_bowl",
+          "displayName": "Noodle Bowl",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 620,
+            "y": 580,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_violin_case",
+          "labelKey": "objects.violin_case",
+          "displayName": "Violin Case",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 880,
+            "y": 640,
+            "width": 72,
+            "height": 48
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": true
+        },
+        {
+          "id": "obj_spice_jar",
+          "labelKey": "objects.spice_jar",
+          "displayName": "Spice Jar",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1040,
+            "y": 520,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_folding_fan",
+          "labelKey": "objects.folding_fan",
+          "displayName": "Folding Fan",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1220,
+            "y": 700,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_merchant_scale",
+          "labelKey": "objects.merchant_scale",
+          "displayName": "Merchant Scale",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1400,
+            "y": 480,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_paper_lantern",
+          "labelKey": "objects.paper_lantern",
+          "displayName": "Paper Lantern",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1580,
+            "y": 320,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_coin_pouch",
+          "labelKey": "objects.coin_pouch",
+          "displayName": "Coin Pouch",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 280,
+            "y": 720,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_wooden_sign",
+          "labelKey": "objects.wooden_sign",
+          "displayName": "Wooden Sign",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 500,
+            "y": 400,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_tea_kettle",
+          "labelKey": "objects.tea_kettle",
+          "displayName": "Tea Kettle",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1720,
+            "y": 600,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1800,
+            "y": 760,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 760,
+            "y": 380,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 1180,
+            "y": 820,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch02_board02",
+      "chapterId": "ch02",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch02_board02.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_music_stand",
+          "labelKey": "objects.music_stand",
+          "displayName": "Music Stand",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 340,
+            "y": 560,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_bow_rosin",
+          "labelKey": "objects.bow_rosin",
+          "displayName": "Bow Rosin",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 520,
+            "y": 720,
+            "width": 36,
+            "height": 36
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_sheet_music",
+          "labelKey": "objects.sheet_music",
+          "displayName": "Sheet Music",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 700,
+            "y": 480,
+            "width": 48,
+            "height": 56
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_busker_hat",
+          "labelKey": "objects.busker_hat",
+          "displayName": "Busker Hat",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 920,
+            "y": 640,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_subway_grate",
+          "labelKey": "objects.subway_grate",
+          "displayName": "Subway Grate",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1080,
+            "y": 820,
+            "width": 64,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_loose_string",
+          "labelKey": "objects.loose_string",
+          "displayName": "Loose String",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1240,
+            "y": 580,
+            "width": 40,
+            "height": 24
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_metronome",
+          "labelKey": "objects.metronome",
+          "displayName": "Metronome",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1420,
+            "y": 500,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_ticket_stub",
+          "labelKey": "objects.ticket_stub",
+          "displayName": "Ticket Stub",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1600,
+            "y": 700,
+            "width": 40,
+            "height": 28
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_street_lamp",
+          "labelKey": "objects.street_lamp",
+          "displayName": "Street Lamp",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1800,
+            "y": 360,
+            "width": 48,
+            "height": 80
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_chalk_mark",
+          "labelKey": "objects.chalk_mark",
+          "displayName": "Chalk Mark",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 460,
+            "y": 380,
+            "width": 32,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1680,
+            "y": 440,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 1120,
+            "y": 380,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 640,
+            "y": 860,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch02_board03",
+      "chapterId": "ch02",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch02_board03.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_phantom_sign",
+          "labelKey": "objects.phantom_sign",
+          "displayName": "Phantom Sign",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 380,
+            "y": 300,
+            "width": 56,
+            "height": 48
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_flickering_light",
+          "labelKey": "objects.flickering_light",
+          "displayName": "Flickering Light",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 600,
+            "y": 220,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_discarded_ticket",
+          "labelKey": "objects.discarded_ticket",
+          "displayName": "Discarded Ticket",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 780,
+            "y": 680,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_graffiti_tag",
+          "labelKey": "objects.graffiti_tag",
+          "displayName": "Graffiti Tag",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 960,
+            "y": 520,
+            "width": 64,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_rusty_rail",
+          "labelKey": "objects.rusty_rail",
+          "displayName": "Rusty Rail",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1140,
+            "y": 780,
+            "width": 80,
+            "height": 24
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_echo_shell",
+          "labelKey": "objects.echo_shell",
+          "displayName": "Echo Shell",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1320,
+            "y": 600,
+            "width": 36,
+            "height": 36
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_wet_leaf",
+          "labelKey": "objects.wet_leaf",
+          "displayName": "Wet Leaf",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1480,
+            "y": 740,
+            "width": 32,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_train_whistle",
+          "labelKey": "objects.train_whistle",
+          "displayName": "Train Whistle",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1660,
+            "y": 480,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_platform_edge",
+          "labelKey": "objects.platform_edge",
+          "displayName": "Platform Edge",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 220,
+            "y": 840,
+            "width": 72,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_glass_shard",
+          "labelKey": "objects.glass_shard",
+          "displayName": "Glass Shard",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 500,
+            "y": 560,
+            "width": 28,
+            "height": 28
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1740,
+            "y": 640,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 1040,
+            "y": 720,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 820,
+            "y": 420,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch03_board01",
+      "chapterId": "ch03",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch03_board01.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_mooring_rope",
+          "labelKey": "objects.mooring_rope",
+          "displayName": "Mooring Rope",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 300,
+            "y": 600,
+            "width": 64,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_fog_buoy",
+          "labelKey": "objects.fog_buoy",
+          "displayName": "Fog Buoy",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 480,
+            "y": 480,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_ferry_schedule",
+          "labelKey": "objects.ferry_schedule",
+          "displayName": "Ferry Schedule",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 680,
+            "y": 360,
+            "width": 56,
+            "height": 48
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_salt_crate",
+          "labelKey": "objects.salt_crate",
+          "displayName": "Salt Crate",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 860,
+            "y": 640,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_seagull_feather",
+          "labelKey": "objects.seagull_feather",
+          "displayName": "Seagull Feather",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1020,
+            "y": 720,
+            "width": 36,
+            "height": 24
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_fisher_net",
+          "labelKey": "objects.fisher_net",
+          "displayName": "Fisher Net",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1200,
+            "y": 520,
+            "width": 72,
+            "height": 56
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_compass",
+          "labelKey": "objects.compass",
+          "displayName": "Compass",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1380,
+            "y": 680,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_wharf_plank",
+          "labelKey": "objects.wharf_plank",
+          "displayName": "Wharf Plank",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1560,
+            "y": 780,
+            "width": 80,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_oil_lantern",
+          "labelKey": "objects.oil_lantern",
+          "displayName": "Oil Lantern",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1720,
+            "y": 440,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_floodgate_key",
+          "labelKey": "objects.floodgate_key",
+          "displayName": "Floodgate Key",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 540,
+            "y": 820,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": true,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1780,
+            "y": 280,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 920,
+            "y": 560,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 1280,
+            "y": 800,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch03_board02",
+      "chapterId": "ch03",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch03_board02.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_ice_tray",
+          "labelKey": "objects.ice_tray",
+          "displayName": "Ice Tray",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 360,
+            "y": 540,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_fish_scale",
+          "labelKey": "objects.fish_scale",
+          "displayName": "Fish Scale",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 520,
+            "y": 700,
+            "width": 32,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_apron_clip",
+          "labelKey": "objects.apron_clip",
+          "displayName": "Apron Clip",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 700,
+            "y": 480,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_price_chalk",
+          "labelKey": "objects.price_chalk",
+          "displayName": "Price Chalk",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 880,
+            "y": 620,
+            "width": 36,
+            "height": 28
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_burlap_sack",
+          "labelKey": "objects.burlap_sack",
+          "displayName": "Burlap Sack",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1060,
+            "y": 740,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_measuring_cup",
+          "labelKey": "objects.measuring_cup",
+          "displayName": "Measuring Cup",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1240,
+            "y": 560,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_wooden_crate",
+          "labelKey": "objects.wooden_crate",
+          "displayName": "Wooden Crate",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1420,
+            "y": 680,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_rope_coil",
+          "labelKey": "objects.rope_coil",
+          "displayName": "Rope Coil",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1600,
+            "y": 500,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_shell_necklace",
+          "labelKey": "objects.shell_necklace",
+          "displayName": "Shell Necklace",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1780,
+            "y": 720,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_stall_awning",
+          "labelKey": "objects.stall_awning",
+          "displayName": "Stall Awning",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 240,
+            "y": 320,
+            "width": 80,
+            "height": 48
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1680,
+            "y": 360,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 760,
+            "y": 760,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 1100,
+            "y": 420,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    },
+    {
+      "id": "ch03_board03",
+      "chapterId": "ch03",
+      "background": "/adventures/the-lost-line/backgrounds/boards/ch03_board03.png",
+      "poolSize": 10,
+      "targetPoolSize": 30,
+      "objects": [
+        {
+          "id": "obj_tide_pool",
+          "labelKey": "objects.tide_pool",
+          "displayName": "Tide Pool",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 400,
+            "y": 780,
+            "width": 72,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_barnacle_cluster",
+          "labelKey": "objects.barnacle_cluster",
+          "displayName": "Barnacle Cluster",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 580,
+            "y": 680,
+            "width": 48,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_driftwood",
+          "labelKey": "objects.driftwood",
+          "displayName": "Driftwood",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 760,
+            "y": 600,
+            "width": 64,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_pier_bolt",
+          "labelKey": "objects.pier_bolt",
+          "displayName": "Pier Bolt",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 940,
+            "y": 740,
+            "width": 32,
+            "height": 32
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_faded_photo",
+          "labelKey": "objects.faded_photo",
+          "displayName": "Faded Photo",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1120,
+            "y": 520,
+            "width": 44,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_witness_scarf",
+          "labelKey": "objects.witness_scarf",
+          "displayName": "Witness Scarf",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1300,
+            "y": 640,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_lighthouse_lens",
+          "labelKey": "objects.lighthouse_lens",
+          "displayName": "Lighthouse Lens",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1480,
+            "y": 380,
+            "width": 56,
+            "height": 56
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_rope_ladder",
+          "labelKey": "objects.rope_ladder",
+          "displayName": "Rope Ladder",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1660,
+            "y": 560,
+            "width": 40,
+            "height": 72
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_sea_glass",
+          "labelKey": "objects.sea_glass",
+          "displayName": "Sea Glass",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 320,
+            "y": 560,
+            "width": 28,
+            "height": 28
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_pier_lamp",
+          "labelKey": "objects.pier_lamp",
+          "displayName": "Pier Lamp",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1800,
+            "y": 480,
+            "width": 44,
+            "height": 44
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_map_fragment",
+          "labelKey": "collectibles.map_fragment",
+          "displayName": "Map Fragment",
+          "type": "special",
+          "collectibleRole": "fragment",
+          "bounds": {
+            "x": 1720,
+            "y": 820,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "special_brass_token",
+          "labelKey": "collectibles.brass_token",
+          "displayName": "Brass Token",
+          "type": "special",
+          "collectibleRole": "collectible",
+          "bounds": {
+            "x": 880,
+            "y": 400,
+            "width": 52,
+            "height": 52
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "easter_egg_brakeman",
+          "labelKey": "easter_egg.brakeman",
+          "displayName": "Brakeman (grey cat)",
+          "type": "easter_egg",
+          "collectibleRole": "brakeman",
+          "bounds": {
+            "x": 620,
+            "y": 460,
+            "width": 40,
+            "height": 40
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        }
+      ]
+    }
+  ]
+}

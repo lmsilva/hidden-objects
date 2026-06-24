@@ -1,0 +1,36 @@
+ASPECT RATIO — REQUIRED FOR EVERY GENERATION
+=============================================
+
+Midjourney IGNORES "16:9" written inside the scene description.
+You must set aspect ratio with --ar 16:9
+
+HOW TO ADD IT
+-------------
+Option 1 (easiest): After pasting single-pass.txt or pass0.txt, add a space and:
+
+--ar 16:9
+
+at the very END of the prompt box.
+
+Option 2: In Midjourney web UI → Settings / Parameters → Aspect ratio → 16:9
+
+Option 3: Some UIs have a wide/landscape toggle — choose widescreen / 16:9.
+
+FULL PARAMETER LINE (when you have references)
+----------------------------------------------
+Paste these AFTER your prompt text, or in the parameters panel:
+
+--ar 16:9
+
+After ch01_board01 is approved:
+--sref <URL of approved ch01_board01 image>
+
+After Brakeman reference:
+--cref <URL of brakeman-reference.png>
+
+Example end of prompt box:
+...grey tomcat notched left ear behind bench leg Brakeman --ar 16:9 --sref https://...
+
+NEGATIVE PROMPT
+---------------
+Put negative.txt in the --no field, NOT mixed with --ar unless your UI supports it.

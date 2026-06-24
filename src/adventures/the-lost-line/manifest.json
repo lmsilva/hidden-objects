@@ -1,0 +1,49 @@
+{
+  "id": "the-lost-line",
+  "version": "0.1.0",
+  "titleKey": "adventure.title",
+  "taglineKey": "adventure.tagline",
+  "specialCollectibleKeys": ["collectibles.map_fragment", "collectibles.brass_token"],
+  "totalStations": 25,
+  "chapters": [
+    {
+      "id": "ch01",
+      "stationKey": "stations.ch01",
+      "boardIds": ["ch01_board01", "ch01_board02", "ch01_board03"],
+      "letterKey": "letters.ch01",
+      "completeStoryKey": "story.ch01_complete",
+      "artTier": "green",
+      "mvp": true
+    },
+    {
+      "id": "ch02",
+      "stationKey": "stations.ch02",
+      "boardIds": ["ch02_board01", "ch02_board02", "ch02_board03"],
+      "letterKey": "letters.ch02",
+      "completeStoryKey": "story.ch02_complete",
+      "artTier": "green",
+      "mvp": true
+    },
+    {
+      "id": "ch03",
+      "stationKey": "stations.ch03",
+      "boardIds": ["ch03_board01", "ch03_board02", "ch03_board03"],
+      "letterKey": "letters.ch03",
+      "completeStoryKey": "story.ch03_complete",
+      "artTier": "yellow",
+      "mvp": true
+    }
+  ],
+  "stations": [
+    { "id": "st01", "chapterId": "ch01", "labelKey": "stations.ch01", "x": 100, "y": 300, "lineColor": "#d4a84b", "mvp": true },
+    { "id": "st02", "chapterId": "ch02", "labelKey": "stations.ch02", "x": 280, "y": 160, "lineColor": "#4a9ead", "mvp": true },
+    { "id": "st03", "chapterId": "ch03", "labelKey": "stations.ch03", "x": 460, "y": 290, "lineColor": "#7eb87a", "mvp": true },
+    { "id": "st04", "chapterId": "ch04", "labelKey": "stations.ch04", "x": 580, "y": 130, "lineColor": "#9a8ec4", "mvp": false },
+    { "id": "st05", "chapterId": "ch05", "labelKey": "stations.ch05", "x": 720, "y": 260, "lineColor": "#9a8ec4", "mvp": false }
+  ],
+  "lineSegments": [
+    { "from": "st01", "to": "st02", "chapterUnlock": "ch02" },
+    { "from": "st02", "to": "st03", "chapterUnlock": "ch03" },
+    { "from": "st03", "to": "st04", "chapterUnlock": "ch04" }
+  ]
+}

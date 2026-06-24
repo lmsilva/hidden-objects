@@ -1,0 +1,201 @@
+{
+  "boardId": "ch02_board02",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_music_stand",
+      "labelKey": "objects.music_stand",
+      "displayName": "Music Stand",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 340,
+        "y": 560,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_bow_rosin",
+      "labelKey": "objects.bow_rosin",
+      "displayName": "Bow Rosin",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 520,
+        "y": 720,
+        "width": 36,
+        "height": 36
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_sheet_music",
+      "labelKey": "objects.sheet_music",
+      "displayName": "Sheet Music",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 700,
+        "y": 480,
+        "width": 48,
+        "height": 56
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_busker_hat",
+      "labelKey": "objects.busker_hat",
+      "displayName": "Busker Hat",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 920,
+        "y": 640,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_subway_grate",
+      "labelKey": "objects.subway_grate",
+      "displayName": "Subway Grate",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1080,
+        "y": 820,
+        "width": 64,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_loose_string",
+      "labelKey": "objects.loose_string",
+      "displayName": "Loose String",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1240,
+        "y": 580,
+        "width": 40,
+        "height": 24
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_metronome",
+      "labelKey": "objects.metronome",
+      "displayName": "Metronome",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1420,
+        "y": 500,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_ticket_stub",
+      "labelKey": "objects.ticket_stub",
+      "displayName": "Ticket Stub",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1600,
+        "y": 700,
+        "width": 40,
+        "height": 28
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_street_lamp",
+      "labelKey": "objects.street_lamp",
+      "displayName": "Street Lamp",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1800,
+        "y": 360,
+        "width": 48,
+        "height": 80
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_chalk_mark",
+      "labelKey": "objects.chalk_mark",
+      "displayName": "Chalk Mark",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 460,
+        "y": 380,
+        "width": 32,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1680,
+        "y": 440,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 1120,
+        "y": 380,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 640,
+        "y": 860,
+        "width": 40,
+        "height": 40
+      },
+      "configured": true
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "boardId": "ch03_board02",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_ice_tray",
+      "labelKey": "objects.ice_tray",
+      "displayName": "Ice Tray",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 360,
+        "y": 540,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_fish_scale",
+      "labelKey": "objects.fish_scale",
+      "displayName": "Fish Scale",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 520,
+        "y": 700,
+        "width": 32,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_apron_clip",
+      "labelKey": "objects.apron_clip",
+      "displayName": "Apron Clip",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 700,
+        "y": 480,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_price_chalk",
+      "labelKey": "objects.price_chalk",
+      "displayName": "Price Chalk",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 880,
+        "y": 620,
+        "width": 36,
+        "height": 28
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_burlap_sack",
+      "labelKey": "objects.burlap_sack",
+      "displayName": "Burlap Sack",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1060,
+        "y": 740,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_measuring_cup",
+      "labelKey": "objects.measuring_cup",
+      "displayName": "Measuring Cup",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1240,
+        "y": 560,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_wooden_crate",
+      "labelKey": "objects.wooden_crate",
+      "displayName": "Wooden Crate",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1420,
+        "y": 680,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_rope_coil",
+      "labelKey": "objects.rope_coil",
+      "displayName": "Rope Coil",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1600,
+        "y": 500,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_shell_necklace",
+      "labelKey": "objects.shell_necklace",
+      "displayName": "Shell Necklace",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1780,
+        "y": 720,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_stall_awning",
+      "labelKey": "objects.stall_awning",
+      "displayName": "Stall Awning",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 240,
+        "y": 320,
+        "width": 80,
+        "height": 48
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1680,
+        "y": 360,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 760,
+        "y": 760,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 1100,
+        "y": 420,
+        "width": 40,
+        "height": 40
+      },
+      "configured": true
+    }
+  ]
+}

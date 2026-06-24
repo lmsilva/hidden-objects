@@ -1,0 +1,215 @@
+{
+  "adventure": {
+    "title": "The Lost Line",
+    "tagline": "A cozy hidden-object mystery beneath Meridian City."
+  },
+  "stations": {
+    "ch01": "Central Exchange",
+    "ch02": "Lantern Street",
+    "ch03": "Gull Harbor",
+    "ch04": "Old Bell",
+    "ch05": "Cinder Yards"
+  },
+  "easter_egg": {
+    "brakeman": "Brakeman (grey cat)"
+  },
+  "objects": {
+    "brass_scale": "Brass Scale",
+    "timetable": "Timetable",
+    "inkwell": "Inkwell",
+    "ticket_roll": "Ticket Roll",
+    "magnifying_glass": "Magnifying Glass",
+    "coffee_cup": "Coffee Cup",
+    "rubber_stamp": "Rubber Stamp",
+    "pocket_watch": "Pocket Watch",
+    "postcard": "Postcard",
+    "ledger": "Ledger",
+    "bench_plaque": "Bench Plaque",
+    "vending_snack": "Vending Snack",
+    "loose_button": "Loose Button",
+    "newspaper": "Newspaper",
+    "enamel_sign": "Enamel Sign",
+    "lost_scarf": "Lost Scarf",
+    "coin": "Coin",
+    "schedule_poster": "Schedule Poster",
+    "glove": "Glove",
+    "token_slot": "Token Slot",
+    "departures_board": "Departures Board",
+    "mosaic_roundel": "Mosaic Roundel",
+    "suitcase": "Suitcase",
+    "bouquet": "Bouquet",
+    "transit_map": "Transit Map",
+    "coin_purse": "Coin Purse",
+    "crumpled_note": "Crumpled Note",
+    "broken_umbrella": "Broken Umbrella",
+    "photo_booth_strip": "Photo Booth Strip",
+    "seal_wax": "Seal Wax",
+    "lantern_string": "Lantern String",
+    "noodle_bowl": "Noodle Bowl",
+    "violin_case": "Violin Case",
+    "spice_jar": "Spice Jar",
+    "folding_fan": "Folding Fan",
+    "merchant_scale": "Merchant Scale",
+    "paper_lantern": "Paper Lantern",
+    "coin_pouch": "Coin Pouch",
+    "wooden_sign": "Wooden Sign",
+    "tea_kettle": "Tea Kettle",
+    "music_stand": "Music Stand",
+    "bow_rosin": "Bow Rosin",
+    "sheet_music": "Sheet Music",
+    "busker_hat": "Busker Hat",
+    "subway_grate": "Subway Grate",
+    "loose_string": "Loose String",
+    "metronome": "Metronome",
+    "ticket_stub": "Ticket Stub",
+    "street_lamp": "Street Lamp",
+    "chalk_mark": "Chalk Mark",
+    "phantom_sign": "Phantom Sign",
+    "flickering_light": "Flickering Light",
+    "discarded_ticket": "Discarded Ticket",
+    "graffiti_tag": "Graffiti Tag",
+    "rusty_rail": "Rusty Rail",
+    "echo_shell": "Echo Shell",
+    "wet_leaf": "Wet Leaf",
+    "train_whistle": "Train Whistle",
+    "platform_edge": "Platform Edge",
+    "glass_shard": "Glass Shard",
+    "mooring_rope": "Mooring Rope",
+    "fog_buoy": "Fog Buoy",
+    "ferry_schedule": "Ferry Schedule",
+    "salt_crate": "Salt Crate",
+    "seagull_feather": "Seagull Feather",
+    "fisher_net": "Fisher Net",
+    "compass": "Compass",
+    "wharf_plank": "Wharf Plank",
+    "oil_lantern": "Oil Lantern",
+    "floodgate_key": "Floodgate Key",
+    "ice_tray": "Ice Tray",
+    "fish_scale": "Fish Scale",
+    "apron_clip": "Apron Clip",
+    "price_chalk": "Price Chalk",
+    "burlap_sack": "Burlap Sack",
+    "measuring_cup": "Measuring Cup",
+    "wooden_crate": "Wooden Crate",
+    "rope_coil": "Rope Coil",
+    "shell_necklace": "Shell Necklace",
+    "stall_awning": "Stall Awning",
+    "tide_pool": "Tide Pool",
+    "barnacle_cluster": "Barnacle Cluster",
+    "driftwood": "Driftwood",
+    "pier_bolt": "Pier Bolt",
+    "faded_photo": "Faded Photo",
+    "witness_scarf": "Witness Scarf",
+    "lighthouse_lens": "Lighthouse Lens",
+    "rope_ladder": "Rope Ladder",
+    "sea_glass": "Sea Glass",
+    "pier_lamp": "Pier Lamp",
+    "tv_remote": "TV Remote",
+    "yarn_ball": "Yarn Ball",
+    "analog_clock": "Analog Clock",
+    "calculator": "Calculator",
+    "fountain_pen": "Fountain Pen",
+    "chopsticks": "Chopsticks",
+    "house_slippers": "House Slippers",
+    "brass_bell": "Brass Bell",
+    "potted_plant": "Potted Plant",
+    "world_map_poster": "World Map Poster",
+    "purple_umbrella": "Purple Umbrella",
+    "door_keys": "Door Keys",
+    "rice_bowl": "Rice Bowl",
+    "desk_lamp": "Desk Lamp",
+    "transit_pass": "Transit Pass",
+    "scissors": "Scissors",
+    "tissue_box": "Tissue Box",
+    "framed_photo": "Framed Photo",
+    "sewing_kit": "Sewing Kit",
+    "teacup_saucer": "Teacup & Saucer"
+  },
+  "prologue": {
+    "eyebrow": "Meridian City · After midnight",
+    "title": "The Lost & Found Counter",
+    "body": "You are Wren, night-shift clerk at Central Exchange — Meridian City's grandest subway hub, long after the last scheduled train.\n\nTonight the counter keeps filling with impossible things: ticket stubs stamped with station names that don't exist, pocket watches still warm, scarves no one remembers losing. Your supervisor calls it paperwork. You call it a pattern.\n\nYour grandmother Edith worked these tunnels before she vanished — when you were small enough to believe adults always came home. The official maps show nothing but the usual colored lines. But Edith left letters, and a grey tomcat named Brakeman who still turns up where he shouldn't.\n\nSomewhere beneath the city runs a second line — the Lost Line — where lost objects, lost moments, and quietly forgotten people end up. Something is erasing it from every chart. If the line disappears completely, the forgetting will spread until no one remembers what was taken.",
+    "mysteryTitle": "The mystery",
+    "mystery1": "Trace Edith's path stop by stop through the stations that shouldn't be there.",
+    "mystery2": "Recover map fragments and brass tokens to redraw the missing line on the transit map.",
+    "mystery3": "Learn why the city is starting to forget — and return what was lost before it's gone for good.",
+    "howTitle": "How to play",
+    "how1": "Search crowded scenes for objects on your find list. Pan and zoom when the challenge allows it.",
+    "how2": "Some finds are clues — map fragments, tokens, and evidence that advance the story.",
+    "how3": "Hints recharge over time but cost points. Watch for Brakeman — he never replaces a hint, only rewards a sharp eye.",
+    "how4": "Clear all boards at a station to unlock the next stop on the map.",
+    "begin": "Open the transit map",
+    "backToMap": "Back to transit map"
+  },
+  "story": {
+    "ch01_complete": {
+      "title": "A Station With No Map",
+      "body": "The brass token won't cool down. Brakeman watches the tunnel as if he can see a train no one else can.\n\nIn the back of the ledger, tucked under a photo of a woman with kind eyes — your grandmother, Edith — a note in her handwriting: \"If you're reading this, you've started to notice. Don't let them convince you that lost means gone.\"\n\nThe departures board flickers. For one frame, a new destination appears: Lantern Street."
+    },
+    "ch02_complete": {
+      "title": "Music for a Phantom Platform",
+      "body": "You return the violin case to a musician who weeps with relief — then blinks, confused, as if she almost forgot why she was crying.\n\nUnder the underpass, the air shivers. A platform that isn't there casts light on the tiles. Brakeman's tail flicks once, twice.\n\nSilas's voice, from nowhere: \"Good. You're learning to look where the map refuses to.\""
+    },
+    "ch03_complete": {
+      "title": "The Tide Remembers",
+      "body": "The witness solidifies — just for a moment — long enough to whisper a name the city has already swallowed.\n\nYou hold the floodgate key and a map fragment that shouldn't fit any chart. The harbor fog parts, and for an instant you see a line drawn in light beneath the water.\n\nEdith's next letter waits. The Lost Line is real."
+    }
+  },
+  "letters": {
+    "ch01": "My dear —\n\nIf this letter found you, then the city is already forgetting small things, and you are already learning to see what others overlook. I used to think \"lost\" was the end of a story. Working the line taught me it's only the middle.\n\nStart at the counter. Count what doesn't belong. The cat knows more than he lets on.\n\n— E.",
+    "ch02": "The market lanterns are honest light — they don't pretend the night isn't there. Neither should you.\n\nWhen you hear music with no musician, follow it. Not toward danger. Toward what someone loved enough to lose track of.\n\n— E.",
+    "ch03": "Harbor fog hides faces, not facts. Someone here is being un-remembered. That is the forgetting at work, and it will reach you too if you stop returning what you find.\n\nKeep the key. You'll need it where the water meets the rails.\n\n— E."
+  },
+  "map": {
+    "selectStation": "Select a station",
+    "lineRestored": "Line restored: {{percent}}%",
+    "enterStation": "Enter station",
+    "selected": "Selected",
+    "stripLabel": "Station route",
+    "brakemanNextMilestone": "Next milestone: {{count}} cats",
+    "brakemanCollectionComplete": "Brakeman collection complete!",
+    "stationPreview": {
+      "ch01": "A grand exchange after midnight — Lost & Found, phantom tokens, and a cat who won't leave.",
+      "ch02": "Lantern-lit stalls and music drifting from a platform that isn't on the map.",
+      "ch03": "Harbor fog, tide gates, and the first whisper of the forgetting."
+    }
+  },
+  "boards": {
+    "ch01_board01": {
+      "title": "Edith's Apartment",
+      "blurb": "Wren's quarters behind the Lost & Found counter — brass scale, pigeonholes, and midnight light through the shōji."
+    },
+    "ch01_board02": {
+      "title": "Platform 1 at Midnight",
+      "blurb": "An empty platform under vintage ads. Vending hum, distant rails, and something watching from the tunnel mouth."
+    },
+    "ch01_board03": {
+      "title": "Grand Ticket Hall",
+      "blurb": "Vaulted tile, mosaic roundel, and a departures board that flickers destinations the archive swears don't exist."
+    },
+    "ch02_board01": {
+      "title": "Lantern Street Market",
+      "blurb": "Evening stalls strung with paper lanterns — spices, noodles, and music leaking from somewhere off the map."
+    },
+    "ch02_board02": {
+      "title": "Busking Corner",
+      "blurb": "A violin case left unclaimed beneath the awning. The crowd heard the song; no one remembers who played it."
+    },
+    "ch02_board03": {
+      "title": "Phantom Underpass",
+      "blurb": "Tiles still warm from foot traffic that never happened. For a heartbeat, a platform glows where the chart shows only wall."
+    },
+    "ch03_board01": {
+      "title": "Ferry Platform",
+      "blurb": "Harbor fog in soft afternoon light. Schedules, mooring ropes, and faces the city is starting to forget."
+    },
+    "ch03_board02": {
+      "title": "Fishmonger Stalls",
+      "blurb": "Salt crates, ice trays, and bargains called out to buyers who may not come back tomorrow."
+    },
+    "ch03_board03": {
+      "title": "Tidegate Pier",
+      "blurb": "Mooring lines, a floodgate key, and the tide line where the Lost Line meets the water."
+    }
+  }
+}

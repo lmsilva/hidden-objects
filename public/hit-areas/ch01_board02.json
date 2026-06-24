@@ -1,0 +1,399 @@
+{
+  "boardId": "ch01_board02",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_bench_plaque",
+      "labelKey": "objects.bench_plaque",
+      "displayName": "Bench Plaque",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 393,
+        "y": 607,
+        "width": 189,
+        "height": 52,
+        "polygon": [
+          [
+            393,
+            610
+          ],
+          [
+            568,
+            607
+          ],
+          [
+            582,
+            649
+          ],
+          [
+            399,
+            659
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_vending_snack",
+      "labelKey": "objects.vending_snack",
+      "displayName": "Vending Snack",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 851,
+        "y": 791,
+        "width": 109,
+        "height": 126,
+        "polygon": [
+          [
+            851,
+            791
+          ],
+          [
+            960,
+            791
+          ],
+          [
+            960,
+            917
+          ],
+          [
+            851,
+            917
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_loose_button",
+      "labelKey": "objects.loose_button",
+      "displayName": "Cigarettes",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 381,
+        "y": 981,
+        "width": 56,
+        "height": 32,
+        "polygon": [
+          [
+            381,
+            981
+          ],
+          [
+            437,
+            981
+          ],
+          [
+            437,
+            1013
+          ],
+          [
+            381,
+            1013
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_newspaper",
+      "labelKey": "objects.newspaper",
+      "displayName": "Newspaper",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 470,
+        "y": 841,
+        "width": 227,
+        "height": 154,
+        "polygon": [
+          [
+            470,
+            852
+          ],
+          [
+            616,
+            841
+          ],
+          [
+            649,
+            933
+          ],
+          [
+            697,
+            948
+          ],
+          [
+            545,
+            995
+          ],
+          [
+            483,
+            967
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_enamel_sign",
+      "labelKey": "objects.enamel_sign",
+      "displayName": "Enamel Sign",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 275,
+        "y": 155,
+        "width": 180,
+        "height": 122,
+        "polygon": [
+          [
+            275,
+            155
+          ],
+          [
+            455,
+            155
+          ],
+          [
+            455,
+            277
+          ],
+          [
+            275,
+            277
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_coin",
+      "labelKey": "objects.coin",
+      "displayName": "Coin",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1320,
+        "y": 880,
+        "width": 28,
+        "height": 28
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_schedule_poster",
+      "labelKey": "objects.schedule_poster",
+      "displayName": "Schedule Poster",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1370,
+        "y": 309,
+        "width": 129,
+        "height": 249,
+        "polygon": [
+          [
+            1370,
+            309
+          ],
+          [
+            1499,
+            327
+          ],
+          [
+            1497,
+            557
+          ],
+          [
+            1370,
+            558
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_glove",
+      "labelKey": "objects.glove",
+      "displayName": "Glove",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 561,
+        "y": 735,
+        "width": 106,
+        "height": 62,
+        "polygon": [
+          [
+            561,
+            735
+          ],
+          [
+            667,
+            735
+          ],
+          [
+            667,
+            797
+          ],
+          [
+            561,
+            797
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_token_slot",
+      "labelKey": "objects.token_slot",
+      "displayName": "Token Slot",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 347,
+        "y": 648,
+        "width": 34,
+        "height": 37,
+        "polygon": [
+          [
+            347,
+            648
+          ],
+          [
+            381,
+            648
+          ],
+          [
+            381,
+            685
+          ],
+          [
+            347,
+            685
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1203,
+        "y": 413,
+        "width": 112,
+        "height": 218,
+        "polygon": [
+          [
+            1203,
+            413
+          ],
+          [
+            1271,
+            439
+          ],
+          [
+            1315,
+            494
+          ],
+          [
+            1293,
+            631
+          ],
+          [
+            1232,
+            570
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 1527,
+        "y": 840,
+        "width": 47,
+        "height": 19,
+        "polygon": [
+          [
+            1527,
+            840
+          ],
+          [
+            1574,
+            840
+          ],
+          [
+            1574,
+            859
+          ],
+          [
+            1527,
+            859
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 669,
+        "y": 643,
+        "width": 180,
+        "height": 118,
+        "polygon": [
+          [
+            669,
+            643
+          ],
+          [
+            751,
+            648
+          ],
+          [
+            849,
+            761
+          ],
+          [
+            669,
+            761
+          ]
+        ]
+      },
+      "configured": true
+    }
+  ],
+  "removedIds": [
+    "obj_lost_scarf"
+  ]
+}

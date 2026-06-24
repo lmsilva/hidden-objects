@@ -1,0 +1,36 @@
+{
+  "name": "hidden-objects",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "download:soundtrack": "node tools/download-soundtrack.mjs",
+    "download:soundtrack:all": "node tools/download-soundtrack.mjs --all",
+    "assets:extract": "node tools/extract-assets.mjs",
+    "assets:prepare-boards": "node tools/prepare-board-backgrounds.mjs",
+    "assets:setup": "npm run assets:extract && npm run assets:prepare-boards",
+    "assets:resize-board": "node tools/resize-board-background.mjs",
+    "export:tuner-data": "npx tsx tools/export-board-tuner-data.ts && npx tsx tools/export-hit-areas-json.ts",
+    "import:hit-areas": "node tools/import-hit-areas.mjs"
+  },
+  "dependencies": {
+    "i18next": "^25.5.2",
+    "idb": "^8.0.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-i18next": "^15.7.3",
+    "react-router-dom": "^7.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5",
+    "vite-plugin-pwa": "^1.0.3"
+  }
+}

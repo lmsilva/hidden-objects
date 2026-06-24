@@ -1,0 +1,60 @@
+THE LOST LINE — Midjourney prompts (plain text)
+================================================
+
+Midjourney only accepts PROMPT TEXT. It cannot read Markdown.
+
+DO NOT paste .md files into Midjourney.
+DO NOT paste this HOW_TO file into Midjourney.
+
+ASPECT RATIO (16:9) — IMPORTANT
+--------------------------------
+Writing "16:9" or "1920x1080" INSIDE the prompt does NOT set image size.
+Midjourney will default to ~4:3 or 1:1 unless you set --ar separately.
+
+You MUST do ONE of these:
+
+  A) Midjourney website — before Generate, open Settings / Parameters and set:
+       Aspect ratio: 16:9
+     (or type --ar 16:9 in the parameters field if your UI has one)
+
+  B) Append to the END of your prompt (after the text from pass0.txt or single-pass.txt):
+       --ar 16:9
+
+  Example — your full prompt box should look like:
+       Painterly hidden-object game illustration, Tokyo subway platform...
+       --ar 16:9
+
+  C) Discord (if you use it): same — add --ar 16:9 at the end of the message.
+
+Target for this game: 16:9 landscape (1920x1080 after export/resize).
+
+WHAT TO DO
+----------
+1. Open the folder for your board, e.g. mj-prompts/ch01_board02/
+2. Open single-pass.txt OR pass0.txt — Ctrl+A — copy prompt text
+3. Paste into Midjourney prompt box
+4. ADD --ar 16:9 (see above) — required every generation
+5. Paste negative.txt into --no / negative prompt field
+6. Add --sref and --cref in parameters when you have reference images
+7. Generate
+8. Multi-pass only: Vary Region / Inpaint with pass1.txt, pass2.txt, etc.
+
+FILE NAMING
+-----------
+pass0.txt       = empty base scene (generate first)
+pass1.txt …     = inpaint zones (≤7 objects each)
+pass-final.txt  = specials + Brakeman (last inpaint)
+single-pass.txt = one-shot prompt (all objects) — still needs --ar 16:9
+negative.txt    = negative prompt (--no field)
+object-list.txt = checklist for YOU (do not paste into MJ)
+
+GENERATION ORDER
+----------------
+ch01_board01 → approve → use as --sref for all other boards
+Then ch01_board02, ch01_board03, ch02_board01 … ch03_board03
+
+OUTPUT
+------
+Save image → resize if needed:
+  node tools/resize-board-background.mjs ch01_board02
+→ public/adventures/the-lost-line/backgrounds/boards/<boardId>.png or .jpg

@@ -1,0 +1,705 @@
+{
+  "boardId": "ch01_board01",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_brass_scale",
+      "labelKey": "objects.brass_scale",
+      "displayName": "Brass Scale",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 567,
+        "y": 501,
+        "width": 215,
+        "height": 179,
+        "polygon": [
+          [
+            567,
+            544
+          ],
+          [
+            678,
+            501
+          ],
+          [
+            782,
+            535
+          ],
+          [
+            775,
+            675
+          ],
+          [
+            685,
+            680
+          ],
+          [
+            581,
+            660
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_timetable",
+      "labelKey": "objects.timetable",
+      "displayName": "Timetable",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1655,
+        "y": 169,
+        "width": 82,
+        "height": 140,
+        "polygon": [
+          [
+            1655,
+            169
+          ],
+          [
+            1726,
+            187
+          ],
+          [
+            1737,
+            309
+          ],
+          [
+            1661,
+            309
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_inkwell",
+      "labelKey": "objects.inkwell",
+      "displayName": "Inkwell",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 921,
+        "y": 597,
+        "width": 96,
+        "height": 94,
+        "polygon": [
+          [
+            957,
+            597
+          ],
+          [
+            1009,
+            609
+          ],
+          [
+            1017,
+            690
+          ],
+          [
+            921,
+            691
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_ticket_roll",
+      "labelKey": "objects.ticket_roll",
+      "displayName": "Ticket Roll",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 871,
+        "y": 936,
+        "width": 76,
+        "height": 67,
+        "polygon": [
+          [
+            871,
+            955
+          ],
+          [
+            906,
+            936
+          ],
+          [
+            947,
+            955
+          ],
+          [
+            947,
+            1003
+          ],
+          [
+            871,
+            1003
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_magnifying_glass",
+      "labelKey": "objects.magnifying_glass",
+      "displayName": "Magnifying Glass",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 967,
+        "y": 950,
+        "width": 121,
+        "height": 53,
+        "polygon": [
+          [
+            969,
+            950
+          ],
+          [
+            1085,
+            951
+          ],
+          [
+            1088,
+            1003
+          ],
+          [
+            967,
+            999
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_coffee_cup",
+      "labelKey": "objects.coffee_cup",
+      "displayName": "Coffee Cup",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1197,
+        "y": 773,
+        "width": 88,
+        "height": 83,
+        "polygon": [
+          [
+            1197,
+            773
+          ],
+          [
+            1285,
+            773
+          ],
+          [
+            1285,
+            856
+          ],
+          [
+            1197,
+            856
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_rubber_stamp",
+      "labelKey": "objects.rubber_stamp",
+      "displayName": "Rubber Stamp",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1101,
+        "y": 421,
+        "width": 27,
+        "height": 39,
+        "polygon": [
+          [
+            1101,
+            421
+          ],
+          [
+            1128,
+            421
+          ],
+          [
+            1128,
+            460
+          ],
+          [
+            1101,
+            460
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_pocket_watch",
+      "labelKey": "objects.pocket_watch",
+      "displayName": "Pocket Watch",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1464,
+        "y": 315,
+        "width": 49,
+        "height": 231,
+        "polygon": [
+          [
+            1489,
+            316
+          ],
+          [
+            1500,
+            315
+          ],
+          [
+            1513,
+            546
+          ],
+          [
+            1464,
+            539
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_postcard",
+      "labelKey": "objects.postcard",
+      "displayName": "Postcard",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_ledger",
+      "labelKey": "objects.ledger",
+      "displayName": "Ledger",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_tv_remote",
+      "labelKey": "objects.tv_remote",
+      "displayName": "TV Remote",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1428,
+        "y": 879,
+        "width": 173,
+        "height": 84,
+        "polygon": [
+          [
+            1428,
+            937
+          ],
+          [
+            1541,
+            879
+          ],
+          [
+            1601,
+            895
+          ],
+          [
+            1494,
+            963
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_yarn_ball",
+      "labelKey": "objects.yarn_ball",
+      "displayName": "Yarn Ball",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_analog_clock",
+      "labelKey": "objects.analog_clock",
+      "displayName": "Analog Clock",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1447,
+        "y": 189,
+        "width": 98,
+        "height": 128,
+        "polygon": [
+          [
+            1486,
+            189
+          ],
+          [
+            1502,
+            189
+          ],
+          [
+            1544,
+            260
+          ],
+          [
+            1545,
+            261
+          ],
+          [
+            1530,
+            317
+          ],
+          [
+            1465,
+            315
+          ],
+          [
+            1447,
+            261
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_calculator",
+      "labelKey": "objects.calculator",
+      "displayName": "Calculator",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_fountain_pen",
+      "labelKey": "objects.fountain_pen",
+      "displayName": "Fountain Pen",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_chopsticks",
+      "labelKey": "objects.chopsticks",
+      "displayName": "Chopsticks",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_house_slippers",
+      "labelKey": "objects.house_slippers",
+      "displayName": "House Slippers",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_brass_bell",
+      "labelKey": "objects.brass_bell",
+      "displayName": "Brass Bell",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_potted_plant",
+      "labelKey": "objects.potted_plant",
+      "displayName": "Potted Plant",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_world_map_poster",
+      "labelKey": "objects.world_map_poster",
+      "displayName": "World Map Poster",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_purple_umbrella",
+      "labelKey": "objects.purple_umbrella",
+      "displayName": "Purple Umbrella",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_door_keys",
+      "labelKey": "objects.door_keys",
+      "displayName": "Door Keys",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_rice_bowl",
+      "labelKey": "objects.rice_bowl",
+      "displayName": "Rice Bowl",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_desk_lamp",
+      "labelKey": "objects.desk_lamp",
+      "displayName": "Desk Lamp",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_transit_pass",
+      "labelKey": "objects.transit_pass",
+      "displayName": "Transit Pass",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_scissors",
+      "labelKey": "objects.scissors",
+      "displayName": "Scissors",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_tissue_box",
+      "labelKey": "objects.tissue_box",
+      "displayName": "Tissue Box",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_framed_photo",
+      "labelKey": "objects.framed_photo",
+      "displayName": "Framed Photo",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_sewing_kit",
+      "labelKey": "objects.sewing_kit",
+      "displayName": "Sewing Kit",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "obj_teacup_saucer",
+      "labelKey": "objects.teacup_saucer",
+      "displayName": "Teacup & Saucer",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "configured": false
+    }
+  ]
+}

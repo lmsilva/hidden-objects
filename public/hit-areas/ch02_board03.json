@@ -1,0 +1,201 @@
+{
+  "boardId": "ch02_board03",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_phantom_sign",
+      "labelKey": "objects.phantom_sign",
+      "displayName": "Phantom Sign",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 380,
+        "y": 300,
+        "width": 56,
+        "height": 48
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_flickering_light",
+      "labelKey": "objects.flickering_light",
+      "displayName": "Flickering Light",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 600,
+        "y": 220,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_discarded_ticket",
+      "labelKey": "objects.discarded_ticket",
+      "displayName": "Discarded Ticket",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 780,
+        "y": 680,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_graffiti_tag",
+      "labelKey": "objects.graffiti_tag",
+      "displayName": "Graffiti Tag",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 960,
+        "y": 520,
+        "width": 64,
+        "height": 40
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_rusty_rail",
+      "labelKey": "objects.rusty_rail",
+      "displayName": "Rusty Rail",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1140,
+        "y": 780,
+        "width": 80,
+        "height": 24
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_echo_shell",
+      "labelKey": "objects.echo_shell",
+      "displayName": "Echo Shell",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1320,
+        "y": 600,
+        "width": 36,
+        "height": 36
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_wet_leaf",
+      "labelKey": "objects.wet_leaf",
+      "displayName": "Wet Leaf",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1480,
+        "y": 740,
+        "width": 32,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_train_whistle",
+      "labelKey": "objects.train_whistle",
+      "displayName": "Train Whistle",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1660,
+        "y": 480,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_platform_edge",
+      "labelKey": "objects.platform_edge",
+      "displayName": "Platform Edge",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 220,
+        "y": 840,
+        "width": 72,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_glass_shard",
+      "labelKey": "objects.glass_shard",
+      "displayName": "Glass Shard",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 500,
+        "y": 560,
+        "width": 28,
+        "height": 28
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1740,
+        "y": 640,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 1040,
+        "y": 720,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 820,
+        "y": 420,
+        "width": 40,
+        "height": 40
+      },
+      "configured": true
+    }
+  ]
+}

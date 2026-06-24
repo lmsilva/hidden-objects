@@ -1,0 +1,76 @@
+{
+  "adventureId": "the-lost-line",
+  "assets": [
+    {
+      "name": "Free Visual Novel Backgrounds (Starter Pack 2)",
+      "creator": "Potat0Master",
+      "url": "https://potat0master.itch.io/free-visual-novel-backgrounds-starter-pack-2",
+      "license": "Royalty-free (commercial use permitted)",
+      "attributionRequired": false,
+      "usedIn": ["ch01_board01", "ch01_board03", "ch02_board02"]
+    },
+    {
+      "name": "Contemporary Visual Novel Backgrounds",
+      "creator": "Spiral Atlas",
+      "url": "https://spiralatlas.itch.io/contemporary-vn-backgrounds",
+      "license": "CC BY 4.0",
+      "attributionRequired": true,
+      "usedIn": ["ch01_board02", "ch03_board01"]
+    },
+    {
+      "name": "Cafe Backgrounds Pack",
+      "creator": "Itsu",
+      "url": "https://itsu-saragi.itch.io/cafe-backgrounds",
+      "license": "Commercial use with credit required",
+      "attributionRequired": true,
+      "usedIn": ["ch02_board01"]
+    },
+    {
+      "name": "Cozy House - Free Backgrounds Pack",
+      "creator": "Nimerone",
+      "url": "https://nimerone.itch.io/cozy-house-free-backgrounds",
+      "license": "Commercial use with credit required",
+      "attributionRequired": true,
+      "usedIn": ["ch02_board03"]
+    },
+    {
+      "name": "Fantasy Items 16x16",
+      "creator": "Marie Pepo",
+      "url": "https://marie-pepo.itch.io/mf-items",
+      "license": "Free commercial with credit",
+      "attributionRequired": true,
+      "usedIn": ["all_boards_objects"]
+    },
+    {
+      "name": "Items pack (x16)",
+      "creator": "Glionox",
+      "url": "https://glionox.itch.io/items16",
+      "license": "Free commercial; credit appreciated",
+      "attributionRequired": false,
+      "usedIn": ["all_boards_objects"]
+    },
+    {
+      "name": "Kenney UI Assets",
+      "creator": "Kenney",
+      "url": "https://kenney.nl/assets",
+      "license": "CC0 1.0",
+      "attributionRequired": false,
+      "usedIn": ["ui"]
+    }
+  ],
+  "music": {
+    "composer": "Kevin MacLeod",
+    "source": "https://incompetech.com",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attributionRequired": true,
+    "note": "All music by Kevin MacLeod. Tracks may be trimmed or looped for gameplay.",
+    "tracks": [
+      { "title": "Vibing Over Venus", "usedFor": "Theme / menu / map" },
+      { "title": "Space Jazz", "usedFor": "Central Exchange (ch01)" },
+      { "title": "Parisian", "usedFor": "Lantern Street (ch02)" },
+      { "title": "Pensif", "usedFor": "Gull Harbor (ch03)" }
+    ],
+    "fullManifest": "src/adventures/the-lost-line/audio/manifest.json"
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hit Area Tuner — The Lost Line</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #0f1820;
+      color: #f0ebe3;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      height: 100vh;
+    }
+    aside {
+      padding: 1rem;
+      overflow-y: auto;
+      border-right: 1px solid #243648;
+    }
+    main {
+      overflow: auto;
+      padding: 1rem;
+      background: #000;
+    }
+    label { display: block; font-size: 0.85rem; margin-top: 0.75rem; color: #a8b4c0; }
+    input, select, button, textarea {
+      width: 100%;
+      margin-top: 0.25rem;
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #243648;
+      background: #1a2a3a;
+      color: #f0ebe3;
+    }
+    button { cursor: pointer; margin-top: 0.5rem; }
+    button.primary { background: #4a9ead; border-color: #4a9ead; }
+    #canvas-wrap { position: relative; display: inline-block; }
+    canvas { display: block; cursor: crosshair; max-width: 100%; }
+    .box-list { font-size: 0.8rem; margin-top: 1rem; }
+    .box-list li { margin-bottom: 0.35rem; word-break: break-all; }
+    .box-list li.active { color: #d4a84b; }
+    p.hint { font-size: 0.8rem; color: #a8b4c0; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1 style="font-size:1.1rem;margin:0">Hit Area Tuner</h1>
+    <p class="hint">Load a composited board PNG (1920×1080). Drag to draw a rectangle. Coordinates are scene pixels.</p>
+
+    <label>Board image URL</label>
+    <input id="url" type="text" placeholder="/adventures/the-lost-line/backgrounds/boards/ch01_board01.png" />
+
+    <button type="button" class="primary" id="load">Load image</button>
+
+    <label>Object id</label>
+    <input id="objId" type="text" placeholder="obj_pocket_watch" />
+
+    <label>Label key</label>
+    <input id="labelKey" type="text" placeholder="objects.pocket_watch" />
+
+    <button type="button" id="exportTs">Copy TypeScript line</button>
+    <button type="button" id="clear">Clear all boxes</button>
+
+    <textarea id="output" rows="4" readonly placeholder="std('obj_id', 'objects.name', x, y, w, h),"></textarea>
+
+    <ul class="box-list" id="list"></ul>
+  </aside>
+  <main>
+    <div id="canvas-wrap">
+      <canvas id="c" width="1920" height="1080"></canvas>
+    </div>
+  </main>
+  <script>
+    const SCENE_W = 1920;
+    const SCENE_H = 1080;
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+    const boxes = [];
+    let img = null;
+    let scale = 1;
+    let drag = null;
+    let selected = -1;
+
+    function resize() {
+      const main = document.querySelector('main');
+      const maxW = main.clientWidth - 32;
+      scale = Math.min(1, maxW / SCENE_W);
+      canvas.style.width = SCENE_W * scale + 'px';
+      canvas.style.height = SCENE_H * scale + 'px';
+      draw();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, SCENE_W, SCENE_H);
+      if (img) ctx.drawImage(img, 0, 0, SCENE_W, SCENE_H);
+      boxes.forEach((b, i) => {
+        ctx.strokeStyle = i === selected ? '#d4a84b' : '#4a9ead';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(b.x, b.y, b.w, b.h);
+        ctx.fillStyle = 'rgba(212,168,75,0.15)';
+        ctx.fillRect(b.x, b.y, b.w, b.h);
+        ctx.fillStyle = '#f0ebe3';
+        ctx.font = '14px sans-serif';
+        ctx.fillText(b.id, b.x + 4, b.y + 16);
+      });
+      if (drag) {
+        const x = Math.min(drag.x0, drag.x1);
+        const y = Math.min(drag.y0, drag.y1);
+        const w = Math.abs(drag.x1 - drag.x0);
+        const h = Math.abs(drag.y1 - drag.y0);
+        ctx.strokeStyle = '#7eb87a';
+        ctx.strokeRect(x, y, w, h);
+      }
+    }
+
+    function toScene(clientX, clientY) {
+      const r = canvas.getBoundingClientRect();
+      return {
+        x: Math.round((clientX - r.left) / scale),
+        y: Math.round((clientY - r.top) / scale),
+      };
+    }
+
+    function refreshList() {
+      const ul = document.getElementById('list');
+      ul.innerHTML = boxes.map((b, i) =>
+        `<li class="${i === selected ? 'active' : ''}">${b.id}: ${b.x}, ${b.y}, ${b.w}, ${b.h}</li>`
+      ).join('');
+    }
+
+    document.getElementById('load').onclick = () => {
+      const src = document.getElementById('url').value.trim();
+      if (!src) return;
+      const im = new Image();
+      im.onload = () => { img = im; draw(); resize(); };
+      im.onerror = () => alert('Failed to load image. Use dev server path or full URL.');
+      im.src = src.startsWith('http') ? src : (src.startsWith('/') ? 'http://localhost:5173' + src : src);
+    };
+
+    canvas.addEventListener('pointerdown', (e) => {
+      const p = toScene(e.clientX, e.clientY);
+      drag = { x0: p.x, y0: p.y, x1: p.x, y1: p.y };
+      canvas.setPointerCapture(e.pointerId);
+    });
+
+    canvas.addEventListener('pointermove', (e) => {
+      if (!drag) return;
+      const p = toScene(e.clientX, e.clientY);
+      drag.x1 = p.x;
+      drag.y1 = p.y;
+      draw();
+    });
+
+    canvas.addEventListener('pointerup', () => {
+      if (!drag) return;
+      const x = Math.min(drag.x0, drag.x1);
+      const y = Math.min(drag.y0, drag.y1);
+      const w = Math.abs(drag.x1 - drag.x0);
+      const h = Math.abs(drag.y1 - drag.y0);
+      drag = null;
+      if (w < 8 || h < 8) return;
+      const id = document.getElementById('objId').value.trim() || `obj_${boxes.length + 1}`;
+      const labelKey = document.getElementById('labelKey').value.trim() || `objects.${id}`;
+      boxes.push({ id, labelKey, x, y, w, h });
+      selected = boxes.length - 1;
+      document.getElementById('output').value =
+        `std('${id}', '${labelKey}', ${x}, ${y}, ${w}, ${h}),`;
+      refreshList();
+      draw();
+    });
+
+    document.getElementById('exportTs').onclick = () => {
+      const lines = boxes.map(b =>
+        `std('${b.id}', '${b.labelKey}', ${b.x}, ${b.y}, ${b.w}, ${b.h}),`
+      ).join('\n');
+      document.getElementById('output').value = lines;
+      navigator.clipboard?.writeText(lines);
+    };
+
+    document.getElementById('clear').onclick = () => {
+      boxes.length = 0;
+      selected = -1;
+      refreshList();
+      draw();
+    };
+
+    window.addEventListener('resize', resize);
+    resize();
+  </script>
+</body>
+</html>

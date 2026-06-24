@@ -1,0 +1,201 @@
+{
+  "boardId": "ch03_board03",
+  "version": 2,
+  "objects": [
+    {
+      "id": "obj_tide_pool",
+      "labelKey": "objects.tide_pool",
+      "displayName": "Tide Pool",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 400,
+        "y": 780,
+        "width": 72,
+        "height": 40
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_barnacle_cluster",
+      "labelKey": "objects.barnacle_cluster",
+      "displayName": "Barnacle Cluster",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 580,
+        "y": 680,
+        "width": 48,
+        "height": 40
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_driftwood",
+      "labelKey": "objects.driftwood",
+      "displayName": "Driftwood",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 760,
+        "y": 600,
+        "width": 64,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_pier_bolt",
+      "labelKey": "objects.pier_bolt",
+      "displayName": "Pier Bolt",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 940,
+        "y": 740,
+        "width": 32,
+        "height": 32
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_faded_photo",
+      "labelKey": "objects.faded_photo",
+      "displayName": "Faded Photo",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1120,
+        "y": 520,
+        "width": 44,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_witness_scarf",
+      "labelKey": "objects.witness_scarf",
+      "displayName": "Witness Scarf",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1300,
+        "y": 640,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_lighthouse_lens",
+      "labelKey": "objects.lighthouse_lens",
+      "displayName": "Lighthouse Lens",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1480,
+        "y": 380,
+        "width": 56,
+        "height": 56
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_rope_ladder",
+      "labelKey": "objects.rope_ladder",
+      "displayName": "Rope Ladder",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1660,
+        "y": 560,
+        "width": 40,
+        "height": 72
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_sea_glass",
+      "labelKey": "objects.sea_glass",
+      "displayName": "Sea Glass",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 320,
+        "y": 560,
+        "width": 28,
+        "height": 28
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_pier_lamp",
+      "labelKey": "objects.pier_lamp",
+      "displayName": "Pier Lamp",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1800,
+        "y": 480,
+        "width": 44,
+        "height": 44
+      },
+      "configured": true
+    },
+    {
+      "id": "special_map_fragment",
+      "labelKey": "collectibles.map_fragment",
+      "displayName": "Map Fragment",
+      "type": "special",
+      "collectibleRole": "fragment",
+      "evidence": false,
+      "bounds": {
+        "x": 1720,
+        "y": 820,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "special_brass_token",
+      "labelKey": "collectibles.brass_token",
+      "displayName": "Brass Token",
+      "type": "special",
+      "collectibleRole": "collectible",
+      "evidence": false,
+      "bounds": {
+        "x": 880,
+        "y": 400,
+        "width": 52,
+        "height": 52
+      },
+      "configured": true
+    },
+    {
+      "id": "easter_egg_brakeman",
+      "labelKey": "easter_egg.brakeman",
+      "displayName": "Brakeman (grey cat)",
+      "type": "easter_egg",
+      "collectibleRole": "brakeman",
+      "evidence": false,
+      "bounds": {
+        "x": 620,
+        "y": 460,
+        "width": 40,
+        "height": 40
+      },
+      "configured": true
+    }
+  ]
+}

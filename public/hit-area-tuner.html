@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hit Area Tuner — The Lost Line</title>
+  <style>
+    :root {
+      --bg: #0f1820;
+      --panel: #1a2a3a;
+      --muted: #a8b4c0;
+      --gold: #d4a84b;
+      --teal: #4a9ead;
+      --green: #7eb87a;
+      --danger: #c45c5c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: #f0ebe3;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      height: 100vh;
+    }
+    aside {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #243648;
+      overflow: hidden;
+    }
+    .aside-head { padding: 1rem; border-bottom: 1px solid #243648; }
+    h1 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+    .hint { font-size: 0.8rem; color: var(--muted); line-height: 1.4; margin: 0; }
+    label { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 0.65rem; }
+    select, button, textarea {
+      width: 100%;
+      margin-top: 0.25rem;
+      padding: 0.45rem 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #243648;
+      background: var(--panel);
+      color: #f0ebe3;
+      font: inherit;
+    }
+    button { cursor: pointer; }
+    button.primary { background: var(--teal); border-color: var(--teal); }
+    button.gold { background: #6b5420; border-color: var(--gold); color: var(--gold); }
+    .stats {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .stats span { background: var(--panel); padding: 0.2rem 0.45rem; border-radius: 4px; }
+    .filters { display: flex; gap: 0.25rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    .filters button { width: auto; font-size: 0.75rem; padding: 0.25rem 0.5rem; }
+    .filters button.active { border-color: var(--gold); color: var(--gold); }
+    .object-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem;
+    }
+    .obj-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.35rem;
+      align-items: start;
+      padding: 0.45rem 0.5rem;
+      margin-bottom: 0.25rem;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 0.82rem;
+      background: var(--panel);
+    }
+    .obj-row:hover { border-color: #2f4558; }
+    .obj-row.selected { border-color: var(--gold); background: #243040; }
+    .obj-row .name { font-weight: 500; }
+    .obj-row .meta { font-size: 0.72rem; color: var(--muted); }
+    .obj-row-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      align-self: start;
+    }
+    .obj-row-delete {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.65rem;
+      height: 1.65rem;
+      padding: 0;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.12s ease, background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+    }
+    .obj-row:hover .obj-row-delete,
+    .obj-row:focus-within .obj-row-delete {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .obj-row-delete:hover {
+      background: rgba(196, 92, 92, 0.22);
+      border-color: rgba(196, 92, 92, 0.45);
+      color: #ffb0b0;
+    }
+    .obj-row-delete:focus-visible {
+      opacity: 1;
+      pointer-events: auto;
+      outline: 2px solid var(--danger);
+      outline-offset: 1px;
+    }
+    .badge {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      align-self: start;
+    }
+    .badge.ok { background: rgba(126,184,122,0.25); color: var(--green); }
+    .badge.miss { background: rgba(196,92,92,0.25); color: var(--danger); }
+    .badge.special { background: rgba(212,168,75,0.2); color: var(--gold); }
+    .aside-foot {
+      padding: 0.75rem;
+      border-top: 1px solid #243648;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    main { overflow: auto; padding: 1rem; background: #000; }
+    #canvas-wrap { display: inline-block; position: relative; }
+    canvas { display: block; cursor: crosshair; max-width: 100%; }
+    .toolbar {
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .toolbar strong { color: var(--gold); }
+    .toolbar-actions { display: flex; gap: 0.35rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    .toolbar-actions button { width: auto; font-size: 0.78rem; padding: 0.3rem 0.55rem; }
+    .toolbar-actions button.active { border-color: var(--gold); color: var(--gold); }
+    .toolbar-actions button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .obj-editor {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #243648;
+      background: #152230;
+    }
+    .obj-editor[hidden] { display: none; }
+    .obj-editor label { margin-top: 0.45rem; }
+    .obj-editor input, .obj-editor select {
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+    }
+    .obj-editor-actions {
+      display: flex;
+      gap: 0.35rem;
+      margin-top: 0.55rem;
+      flex-wrap: wrap;
+    }
+    .obj-editor-actions button { width: auto; font-size: 0.78rem; padding: 0.35rem 0.55rem; }
+    .obj-editor-actions button.danger { border-color: var(--danger); color: #ffb0b0; }
+    .badge.fragment { background: rgba(74,158,173,0.25); color: var(--teal); }
+    .badge.collectible { background: rgba(212,168,75,0.2); color: var(--gold); }
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="aside-head">
+      <h1>Hit Area Tuner</h1>
+      <p class="hint">Preloads <code>public/hit-areas/&lt;board&gt;.json</code>. Rename objects, set fragment/collectible roles, add custom finds, draw hit boxes. Export → <code>node tools/import-hit-areas.mjs your.json</code></p>
+      <label>Board</label>
+      <select id="boardSelect"></select>
+      <div class="stats" id="stats"></div>
+      <div class="filters" id="filters">
+        <button type="button" data-filter="needs" class="active">Needs box</button>
+        <button type="button" data-filter="all">All</button>
+        <button type="button" data-filter="done">Configured</button>
+        <button type="button" data-filter="pool">Pool only</button>
+      </div>
+      <div class="obj-editor" id="objEditor" hidden>
+        <label for="objName">Display name</label>
+        <input id="objName" type="text" placeholder="Name shown in game" />
+        <label for="objRole">Object role</label>
+        <select id="objRole">
+          <option value="standard">Find object</option>
+          <option value="fragment">Map fragment</option>
+          <option value="collectible">Collectible (token)</option>
+          <option value="brakeman">Brakeman (cat)</option>
+        </select>
+        <div class="obj-editor-actions">
+          <button type="button" id="addObjectBtn">+ Add object</button>
+          <button type="button" class="danger" id="removeObjectBtn">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div class="object-list" id="objectList"></div>
+    <div class="aside-foot">
+      <button type="button" id="importJson">Import JSON</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden />
+      <button type="button" id="clearBox">Clear selected box</button>
+      <button type="button" class="primary" id="exportJson">Download hit-areas JSON</button>
+      <button type="button" class="gold" id="copyTs">Copy TypeScript snippet</button>
+      <textarea id="output" readonly placeholder="Export appears here…"></textarea>
+    </div>
+  </aside>
+  <main>
+    <div class="toolbar" id="toolbar">Select an object from the list, then drag on the image.</div>
+    <div class="toolbar-actions">
+      <button type="button" id="undoBtn" title="Undo (Ctrl+Z)" disabled>Undo</button>
+      <button type="button" id="redoBtn" title="Redo (Ctrl+Y)" disabled>Redo</button>
+      <button type="button" id="addPointBtn">+ Add point</button>
+      <button type="button" id="outlineBtn">Click outline</button>
+      <button type="button" id="finishOutlineBtn" hidden>Finish outline</button>
+    </div>
+    <div id="canvas-wrap"><canvas id="c" width="1920" height="1080"></canvas></div>
+  </main>
+  <script>
+    const SCENE_W = 1920, SCENE_H = 1080;
+    const HANDLE_R = 11;
+    const EDGE_HIT = 14;
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+    let data = null;
+    let board = null;
+    let selectedId = null;
+    let selectedVertex = null;
+    let filter = 'needs';
+    let img = null;
+    let scale = 1;
+    let drag = null;
+    let vertexDrag = null;
+    let addPointMode = false;
+    let outlineMode = false;
+    let outlinePoints = [];
+    let outlineCursor = null;
+    const HISTORY_LIMIT = 50;
+    let historyPast = [];
+    let historyFuture = [];
+    let historySuspended = false;
+    let nameHistoryPushed = false;
+    const storageKey = (id) => `hit-tuner-v6-${id}`;
+
+    function captureBoardState() {
+      return JSON.stringify({
+        objects: board.objects.map(serializeObject),
+        removedIds: [...(board.removedIds || [])],
+        selectedId,
+      });
+    }
+
+    function restoreBoardState(snapshot) {
+      const snap = JSON.parse(snapshot);
+      board.objects = snap.objects.map((o) => hydrateObject(o));
+      board.removedIds = snap.removedIds || [];
+      selectedId = snap.selectedId;
+      selectedVertex = null;
+      if (selectedId && !board.objects.some((o) => o.id === selectedId)) {
+        selectedId = null;
+      }
+      setAddPointMode(false);
+      setOutlineMode(false);
+      persistBoard();
+      renderList();
+      syncObjectEditor();
+      updateStats();
+      updateHistoryUi();
+      draw();
+    }
+
+    function updateHistoryUi() {
+      const undoBtn = document.getElementById('undoBtn');
+      const redoBtn = document.getElementById('redoBtn');
+      if (undoBtn) undoBtn.disabled = historyPast.length === 0;
+      if (redoBtn) redoBtn.disabled = historyFuture.length === 0;
+    }
+
+    function resetHistory() {
+      historyPast = [];
+      historyFuture = [];
+      updateHistoryUi();
+    }
+
+    function pushHistory() {
+      if (historySuspended || !board) return;
+      historyPast.push(captureBoardState());
+      if (historyPast.length > HISTORY_LIMIT) historyPast.shift();
+      historyFuture = [];
+      updateHistoryUi();
+    }
+
+    function undo() {
+      if (!historyPast.length || !board) return;
+      historySuspended = true;
+      historyFuture.push(captureBoardState());
+      restoreBoardState(historyPast.pop());
+      historySuspended = false;
+      updateHistoryUi();
+    }
+
+    function redo() {
+      if (!historyFuture.length || !board) return;
+      historySuspended = true;
+      historyPast.push(captureBoardState());
+      restoreBoardState(historyFuture.pop());
+      historySuspended = false;
+      updateHistoryUi();
+    }
+
+    function roleOf(o) {
+      if (o.collectibleRole) return o.collectibleRole;
+      if (o.id === 'special_map_fragment') return 'fragment';
+      if (o.id === 'special_brass_token') return 'collectible';
+      if (o.type === 'easter_egg') return 'brakeman';
+      return 'standard';
+    }
+
+    function clearExclusiveRole(role, keepId) {
+      for (const o of board.objects) {
+        if (o.id === keepId) continue;
+        if (role === 'fragment' && (o.id === 'special_map_fragment' || roleOf(o) === 'fragment')) {
+          demoteToStandard(o);
+        }
+        if (role === 'collectible' && (o.id === 'special_brass_token' || roleOf(o) === 'collectible')) {
+          demoteToStandard(o);
+        }
+        if (role === 'brakeman' && (o.type === 'easter_egg' || roleOf(o) === 'brakeman')) {
+          demoteToStandard(o);
+        }
+      }
+    }
+
+    function demoteToStandard(o) {
+      if (o.id === 'special_map_fragment' || o.id === 'special_brass_token' || o.type === 'easter_egg') {
+        const n = board.objects.filter((x) => x.id.startsWith('obj_demoted_')).length + 1;
+        o.id = `obj_demoted_${n}`;
+        o.labelKey = `objects.${o.id.replace(/^obj_/, '')}`;
+      }
+      o.type = 'standard';
+      o.collectibleRole = 'standard';
+    }
+
+    function applyRole(o, role) {
+      if (role === 'fragment') {
+        clearExclusiveRole('fragment', o.id);
+        o.id = 'special_map_fragment';
+        o.type = 'special';
+        o.labelKey = 'collectibles.map_fragment';
+        o.collectibleRole = 'fragment';
+      } else if (role === 'collectible') {
+        clearExclusiveRole('collectible', o.id);
+        o.id = 'special_brass_token';
+        o.type = 'special';
+        o.labelKey = 'collectibles.brass_token';
+        o.collectibleRole = 'collectible';
+      } else if (role === 'brakeman') {
+        clearExclusiveRole('brakeman', o.id);
+        o.id = 'easter_egg_brakeman';
+        o.type = 'easter_egg';
+        o.labelKey = 'easter_egg.brakeman';
+        o.collectibleRole = 'brakeman';
+      } else {
+        if (o.id === 'special_map_fragment' || o.id === 'special_brass_token' || o.type === 'easter_egg') {
+          const n = board.objects.filter((x) => x.id.startsWith('obj_demoted_')).length + 1;
+          o.id = `obj_demoted_${n}`;
+          o.labelKey = `objects.${o.id.replace(/^obj_/, '')}`;
+        }
+        o.type = 'standard';
+        o.collectibleRole = 'standard';
+      }
+    }
+
+    function serializeObject(o) {
+      return {
+        id: o.id,
+        labelKey: o.labelKey,
+        displayName: o.displayName,
+        type: o.type,
+        collectibleRole: roleOf(o),
+        evidence: !!o.evidence,
+        bounds: o.configured ? exportBounds(o.bounds) : { x: 0, y: 0, width: 0, height: 0 },
+        configured: !!o.configured,
+      };
+    }
+
+    function hydrateObject(o) {
+      const bounds = normBounds(o.bounds || { x: 0, y: 0, width: 0, height: 0 });
+      syncAabb(bounds);
+      const configured = o.configured ?? isConfigured(bounds);
+      return {
+        id: o.id,
+        labelKey: o.labelKey || `objects.${o.id.replace(/^obj_/, '')}`,
+        displayName: o.displayName || o.id,
+        type: o.type || 'standard',
+        collectibleRole: o.collectibleRole || roleOf(o),
+        evidence: !!o.evidence,
+        bounds,
+        configured,
+      };
+    }
+
+    function rectToPolygon(x, y, w, h) {
+      return [[x, y], [x + w, y], [x + w, y + h], [x, y + h]];
+    }
+
+    function clampScene(x, y) {
+      return [
+        Math.max(0, Math.min(SCENE_W, x)),
+        Math.max(0, Math.min(SCENE_H, y)),
+      ];
+    }
+
+    function migrateShape(bounds) {
+      if (bounds.polygon) return bounds;
+      if (bounds.quad) {
+        bounds.polygon = bounds.quad.map((p) => [p[0], p[1]]);
+        delete bounds.quad;
+      }
+      return bounds;
+    }
+
+    function syncAabb(bounds) {
+      const poly = ensurePolygon(bounds);
+      if (!poly) return;
+      const xs = poly.map((p) => p[0]);
+      const ys = poly.map((p) => p[1]);
+      bounds.x = Math.min(...xs);
+      bounds.y = Math.min(...ys);
+      bounds.width = Math.max(...xs) - bounds.x;
+      bounds.height = Math.max(...ys) - bounds.y;
+    }
+
+    function ensurePolygon(bounds) {
+      migrateShape(bounds);
+      if (bounds.polygon && bounds.polygon.length >= 3) return bounds.polygon;
+      if (bounds.width > 0 && bounds.height > 0) {
+        return rectToPolygon(bounds.x, bounds.y, bounds.width, bounds.height);
+      }
+      return null;
+    }
+
+    function normBounds(b) {
+      const out = {
+        x: b.x,
+        y: b.y,
+        width: b.width ?? b.w ?? 0,
+        height: b.height ?? b.h ?? 0,
+      };
+      if (b.polygon) out.polygon = b.polygon.map((p) => [p[0], p[1]]);
+      else if (b.quad) out.polygon = b.quad.map((p) => [p[0], p[1]]);
+      return out;
+    }
+
+    function isConfigured(bounds) {
+      return bounds.width > 0 && bounds.height > 0;
+    }
+
+    function exportBounds(bounds) {
+      const b = normBounds(bounds);
+      syncAabb(b);
+      return b;
+    }
+
+    function vertexAt(px, py, poly) {
+      for (let i = 0; i < poly.length; i++) {
+        const [cx, cy] = poly[i];
+        if (Math.hypot(px - cx, py - cy) <= HANDLE_R + 4) return i;
+      }
+      return -1;
+    }
+
+    function projectOnSegment(px, py, ax, ay, bx, by) {
+      const dx = bx - ax;
+      const dy = by - ay;
+      const lenSq = dx * dx + dy * dy;
+      if (lenSq === 0) return { x: ax, y: ay, t: 0 };
+      const t = Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / lenSq));
+      return { x: ax + t * dx, y: ay + t * dy, t };
+    }
+
+    function nearestEdge(poly, px, py, maxDist = EDGE_HIT) {
+      let best = null;
+      for (let i = 0; i < poly.length; i++) {
+        const [ax, ay] = poly[i];
+        const [bx, by] = poly[(i + 1) % poly.length];
+        const proj = projectOnSegment(px, py, ax, ay, bx, by);
+        const dist = Math.hypot(px - proj.x, py - proj.y);
+        if (dist <= maxDist && (!best || dist < best.dist)) {
+          best = { dist, edgeIndex: i, point: clampScene(Math.round(proj.x), Math.round(proj.y)) };
+        }
+      }
+      return best;
+    }
+
+    function insertOnEdge(poly, edgeIndex, point) {
+      const next = poly.map((p) => [p[0], p[1]]);
+      next.splice(edgeIndex + 1, 0, point);
+      return next;
+    }
+
+    function drawPolygon(poly, stroke, fill, lineWidth = 2) {
+      if (!poly || poly.length < 2) return;
+      ctx.beginPath();
+      ctx.moveTo(poly[0][0], poly[0][1]);
+      for (let i = 1; i < poly.length; i++) ctx.lineTo(poly[i][0], poly[i][1]);
+      if (poly.length >= 3) ctx.closePath();
+      if (fill && poly.length >= 3) {
+        ctx.fillStyle = fill;
+        ctx.fill();
+      }
+      ctx.strokeStyle = stroke;
+      ctx.lineWidth = lineWidth;
+      ctx.stroke();
+    }
+
+    function drawHandles(poly, selectedIdx = -1) {
+      poly.forEach(([x, y], i) => {
+        const r = i === selectedIdx ? HANDLE_R + 3 : HANDLE_R;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fillStyle = i === selectedIdx ? '#f0ebe3' : '#d4a84b';
+        ctx.fill();
+        ctx.strokeStyle = '#0f1820';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      });
+    }
+
+    function setAddPointMode(on) {
+      addPointMode = on;
+      document.getElementById('addPointBtn').classList.toggle('active', on);
+      if (on) setOutlineMode(false);
+      updateToolbar();
+    }
+
+    function setOutlineMode(on) {
+      outlineMode = on;
+      outlinePoints = [];
+      outlineCursor = null;
+      document.getElementById('outlineBtn').classList.toggle('active', on);
+      document.getElementById('finishOutlineBtn').hidden = !on;
+      if (on) setAddPointMode(false);
+      updateToolbar();
+      draw();
+    }
+
+    async function loadData() {
+      const res = await fetch('/board-tuner-data.json');
+      data = await res.json();
+      const sel = document.getElementById('boardSelect');
+      sel.innerHTML = data.boards.map((b) =>
+        `<option value="${b.id}">${b.id} (${b.poolSize}/${b.targetPoolSize} pool)</option>`
+      ).join('');
+      sel.onchange = () => void selectBoard(sel.value);
+      const saved = localStorage.getItem('hit-tuner-last-board');
+      await selectBoard(saved || data.boards[0]?.id);
+      sel.value = board?.id ?? '';
+    }
+
+    async function fetchRepoHitAreas(boardId) {
+      try {
+        const res = await fetch(`/hit-areas/${boardId}.json`, { cache: 'no-store' });
+        if (!res.ok) return null;
+        return await res.json();
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function applyRepoObjects(objects) {
+      if (!Array.isArray(objects)) return;
+      for (const so of objects) {
+        const hydrated = hydrateObject(so);
+        const idx = board.objects.findIndex((o) => o.id === hydrated.id);
+        if (idx >= 0) {
+          board.objects[idx] = { ...board.objects[idx], ...hydrated };
+        } else {
+          board.objects.push(hydrated);
+        }
+      }
+    }
+
+    function mergeStored(boardId) {
+      const raw = localStorage.getItem(storageKey(boardId));
+      if (!raw) return;
+      try {
+        const stored = JSON.parse(raw);
+        if (stored.version === 6 && Array.isArray(stored.objects)) {
+          const byId = new Map(board.objects.map((o) => [o.id, o]));
+          for (const so of stored.objects) {
+            const hydrated = hydrateObject(so);
+            if (byId.has(hydrated.id)) {
+              Object.assign(byId.get(hydrated.id), hydrated);
+            } else {
+              board.objects.push(hydrated);
+            }
+          }
+          board.removedIds = stored.removedIds || [];
+          board.objects = board.objects.filter((o) => !board.removedIds.includes(o.id));
+          return;
+        }
+        for (const obj of board.objects) {
+          const hit = stored[obj.id];
+          if (!hit) continue;
+          obj.bounds = normBounds(hit);
+          syncAabb(obj.bounds);
+          obj.configured = isConfigured(obj.bounds);
+        }
+      } catch (_) {}
+    }
+
+    function persistBoard() {
+      if (!board) return;
+      const payload = {
+        version: 6,
+        objects: board.objects.map(serializeObject),
+        removedIds: board.removedIds || [],
+      };
+      localStorage.setItem(storageKey(board.id), JSON.stringify(payload));
+      localStorage.setItem('hit-tuner-last-board', board.id);
+    }
+
+    async function selectBoard(id) {
+      board = JSON.parse(JSON.stringify(data.boards.find((b) => b.id === id)));
+      board.removedIds = [];
+      const repo = await fetchRepoHitAreas(id);
+      if (repo?.objects?.length) {
+        applyRepoObjects(repo.objects);
+      }
+      mergeStored(id);
+      selectedId = null;
+      selectedVertex = null;
+      setAddPointMode(false);
+      setOutlineMode(false);
+      const im = new Image();
+      im.onload = () => { img = im; resize(); draw(); };
+      im.src = board.background;
+      renderList();
+      updateStats();
+      syncFilterButtons();
+      syncObjectEditor();
+      resetHistory();
+    }
+
+    function pointInPolygon(x, y, poly) {
+      let inside = false;
+      for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+        const xi = poly[i][0];
+        const yi = poly[i][1];
+        const xj = poly[j][0];
+        const yj = poly[j][1];
+        const intersect =
+          yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi;
+        if (intersect) inside = !inside;
+      }
+      return inside;
+    }
+
+    function hitTestAt(px, py) {
+      for (let i = board.objects.length - 1; i >= 0; i--) {
+        const o = board.objects[i];
+        if (!o.configured) continue;
+        const poly = ensurePolygon(o.bounds);
+        if (!poly || poly.length < 3) continue;
+        if (pointInPolygon(px, py, poly)) return o;
+      }
+      return null;
+    }
+
+    function selectObject(id, { scroll = true } = {}) {
+      selectedId = id;
+      selectedVertex = null;
+      setAddPointMode(false);
+      setOutlineMode(false);
+      const o = board.objects.find((x) => x.id === id);
+      if (o) {
+        if (filter === 'needs' && o.configured) filter = 'done';
+        else if (filter === 'done' && !o.configured) filter = 'all';
+        syncFilterButtons();
+      }
+      renderList();
+      syncObjectEditor();
+      updateToolbar();
+      if (scroll) {
+        requestAnimationFrame(() => {
+          document.querySelector(`.obj-row[data-id="${id}"]`)?.scrollIntoView({
+            block: 'nearest',
+            behavior: 'smooth',
+          });
+        });
+      }
+      draw();
+    }
+
+    function syncFilterButtons() {
+      document.querySelectorAll('.filters button').forEach((b) => {
+        b.classList.toggle('active', b.dataset.filter === filter);
+      });
+    }
+
+    function poolObjects() {
+      return board.objects.filter((o) => o.type === 'standard');
+    }
+
+    function filteredObjects() {
+      return board.objects.filter((o) => {
+        if (filter === 'needs') return !o.configured;
+        if (filter === 'done') return o.configured;
+        if (filter === 'pool') return o.type === 'standard';
+        return true;
+      });
+    }
+
+    function renderList() {
+      const el = document.getElementById('objectList');
+      el.innerHTML = filteredObjects().map((o) => {
+        const role = roleOf(o);
+        let badge = o.configured ? 'ok' : 'miss';
+        let badgeText = o.configured ? '✓' : '!';
+        if (role === 'fragment') { badge = 'fragment'; badgeText = '◆'; }
+        else if (role === 'collectible') { badge = 'collectible'; badgeText = '★'; }
+        else if (role === 'brakeman') { badge = 'special'; badgeText = '🐱'; }
+        else if (o.type === 'special') { badge = 'special'; badgeText = '★'; }
+        const b = o.bounds;
+        const pts = o.configured ? ensurePolygon(b)?.length ?? 0 : 0;
+        const coord = o.configured ? `${pts} pts` : 'no shape';
+        return `<div class="obj-row ${o.id === selectedId ? 'selected' : ''}" data-id="${o.id}">
+          <div><div class="name">${escapeHtml(o.displayName || o.id)}</div><div class="meta">${o.id} · ${coord}</div></div>
+          <div class="obj-row-actions">
+            <button type="button" class="obj-row-delete" data-delete-id="${o.id}" title="Delete ${escapeHtml(o.displayName || o.id)}" aria-label="Delete ${escapeHtml(o.displayName || o.id)}">🗑</button>
+            <span class="badge ${badge}">${badgeText}</span>
+          </div>
+        </div>`;
+      }).join('');
+      el.querySelectorAll('.obj-row').forEach((row) => {
+        row.onclick = (e) => {
+          if (e.target.closest('.obj-row-delete')) return;
+          selectObject(row.dataset.id);
+        };
+      });
+      el.querySelectorAll('.obj-row-delete').forEach((btn) => {
+        btn.onclick = (e) => {
+          e.stopPropagation();
+          removeObjectById(btn.dataset.deleteId, { confirm: false });
+        };
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function removeObjectById(id, { confirm = true } = {}) {
+      const o = board.objects.find((obj) => obj.id === id);
+      if (!o) return;
+      const name = o.displayName || o.id;
+      if (confirm && !window.confirm(`Delete "${name}" from this board?`)) return;
+      pushHistory();
+      board.removedIds = board.removedIds || [];
+      if (!board.removedIds.includes(o.id)) board.removedIds.push(o.id);
+      board.objects = board.objects.filter((obj) => obj.id !== o.id);
+      if (selectedId === o.id) {
+        selectedId = null;
+        selectedVertex = null;
+        setAddPointMode(false);
+        setOutlineMode(false);
+      }
+      persistBoard();
+      renderList();
+      syncObjectEditor();
+      updateStats();
+      draw();
+    }
+
+    function removeSelectedObject() {
+      if (!selectedId) return;
+      removeObjectById(selectedId, { confirm: true });
+    }
+
+    function syncObjectEditor() {
+      const panel = document.getElementById('objEditor');
+      const o = board?.objects.find((x) => x.id === selectedId);
+      if (!o) {
+        panel.hidden = true;
+        return;
+      }
+      panel.hidden = false;
+      document.getElementById('objName').value = o.displayName || '';
+      document.getElementById('objRole').value = roleOf(o);
+      document.getElementById('removeObjectBtn').disabled = false;
+    }
+
+    function updateStats() {
+      const pool = poolObjects();
+      const done = pool.filter((o) => o.configured).length;
+      document.getElementById('stats').innerHTML =
+        `<span>Pool ${done}/${pool.length}</span><span>Total ${board.objects.filter((o)=>o.configured).length}/${board.objects.length}</span>`;
+    }
+
+    function updateToolbar() {
+      const o = board?.objects.find((x) => x.id === selectedId);
+      let msg = 'Click a <strong>hit box</strong> on the image or pick an object from the list.';
+      if (o) {
+        if (outlineMode) {
+          msg = `Click outline for <strong>${o.displayName}</strong> — ${outlinePoints.length} points placed (need 3+), then Finish`;
+        } else if (addPointMode) {
+          msg = `Add point to <strong>${o.displayName}</strong> — click near an edge on the image`;
+        } else {
+          msg = `Editing <strong>${o.displayName}</strong> — drag vertices · right-click edge to add point · right-click vertex to remove · double-click edge to add`;
+        }
+      }
+      document.getElementById('toolbar').innerHTML = msg;
+    }
+
+    function resize() {
+      const maxW = document.querySelector('main').clientWidth - 32;
+      scale = Math.min(1, maxW / SCENE_W);
+      canvas.style.width = SCENE_W * scale + 'px';
+      canvas.style.height = SCENE_H * scale + 'px';
+      draw();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, SCENE_W, SCENE_H);
+      if (img) ctx.drawImage(img, 0, 0, SCENE_W, SCENE_H);
+      for (const o of board.objects) {
+        if (!o.configured) continue;
+        const poly = ensurePolygon(o.bounds);
+        const isSel = o.id === selectedId;
+        drawPolygon(
+          poly,
+          isSel ? '#d4a84b' : 'rgba(74,158,173,0.85)',
+          isSel ? 'rgba(212,168,75,0.12)' : 'rgba(74,158,173,0.08)',
+          isSel ? 3 : 1.5,
+        );
+        if (!isSel) {
+          const cx = o.bounds.x + o.bounds.width / 2;
+          const cy = o.bounds.y + o.bounds.height / 2;
+          ctx.font = '600 13px Segoe UI, system-ui, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillStyle = 'rgba(15, 24, 32, 0.75)';
+          const label = o.displayName || o.id;
+          const tw = ctx.measureText(label).width;
+          ctx.fillRect(cx - tw / 2 - 6, cy - 9, tw + 12, 18);
+          ctx.fillStyle = isSel ? '#f0ebe3' : '#d4a84b';
+          ctx.fillText(label, cx, cy);
+        }
+      }
+      const sel = board.objects.find((o) => o.id === selectedId);
+      if (sel?.configured) drawHandles(ensurePolygon(sel.bounds), selectedVertex ?? -1);
+      if (outlineMode && outlinePoints.length) {
+        const preview = outlineCursor
+          ? [...outlinePoints, outlineCursor]
+          : outlinePoints;
+        drawPolygon(preview, '#7eb87a', outlinePoints.length >= 3 ? 'rgba(126,184,122,0.12)' : null, 2);
+        drawHandles(outlinePoints);
+      }
+      if (drag) {
+        const x = Math.min(drag.x0, drag.x1), y = Math.min(drag.y0, drag.y1);
+        const w = Math.abs(drag.x1 - drag.x0), h = Math.abs(drag.y1 - drag.y0);
+        drawPolygon(rectToPolygon(x, y, w, h), '#7eb87a', 'rgba(126,184,122,0.12)', 2);
+      }
+      updateToolbar();
+    }
+
+    function toScene(cx, cy) {
+      const r = canvas.getBoundingClientRect();
+      return { x: Math.round((cx - r.left) / scale), y: Math.round((cy - r.top) / scale) };
+    }
+
+    function applyPolygon(poly) {
+      const o = board.objects.find((obj) => obj.id === selectedId);
+      if (!o || poly.length < 3) return;
+      pushHistory();
+      o.bounds = { x: 0, y: 0, width: 0, height: 0, polygon: poly.map((p) => [p[0], p[1]]) };
+      syncAabb(o.bounds);
+      o.configured = true;
+      selectedVertex = null;
+      persistBoard();
+      renderList();
+      updateStats();
+      draw();
+    }
+
+    function applyRect(x, y, w, h) {
+      applyPolygon(rectToPolygon(x, y, w, h));
+    }
+
+    function clearObjectOutline(o, { recordHistory = true } = {}) {
+      if (recordHistory) pushHistory();
+      o.bounds = { x: 0, y: 0, width: 0, height: 0 };
+      delete o.bounds.polygon;
+      delete o.bounds.quad;
+      o.configured = false;
+      selectedVertex = null;
+      persistBoard();
+      renderList();
+      updateStats();
+      draw();
+    }
+
+    function insertPointOnNearestEdge(o, px, py, maxDist = EDGE_HIT) {
+      const poly = ensurePolygon(o.bounds);
+      if (!poly) return false;
+      const edge = nearestEdge(poly, px, py, maxDist);
+      if (!edge) return false;
+      pushHistory();
+      o.bounds.polygon = insertOnEdge(poly, edge.edgeIndex, edge.point);
+      syncAabb(o.bounds);
+      selectedVertex = edge.edgeIndex + 1;
+      persistBoard();
+      renderList();
+      draw();
+      return true;
+    }
+
+    function deleteVertex(o, idx) {
+      const poly = ensurePolygon(o.bounds);
+      if (!poly || idx < 0) return;
+      pushHistory();
+      const next = poly.filter((_, i) => i !== idx);
+      if (next.length < 3) {
+        clearObjectOutline(o, { recordHistory: false });
+        return;
+      }
+      o.bounds.polygon = next.map((p) => [p[0], p[1]]);
+      syncAabb(o.bounds);
+      selectedVertex = null;
+      persistBoard();
+      renderList();
+      draw();
+    }
+
+    function clearSelectedBox() {
+      const o = board.objects.find((obj) => obj.id === selectedId);
+      if (!o) return;
+      clearObjectOutline(o);
+      setOutlineMode(false);
+    }
+
+    function handleShapeRightClick(e) {
+      if (outlineMode) return;
+      const p = toScene(e.clientX, e.clientY);
+      const hit = hitTestAt(p.x, p.y);
+      if (hit && hit.id !== selectedId) {
+        selectObject(hit.id, { scroll: true });
+      }
+      const active = board.objects.find((obj) => obj.id === (hit?.id ?? selectedId));
+      if (!active?.configured) return;
+
+      const poly = ensurePolygon(active.bounds);
+      const vidx = vertexAt(p.x, p.y, poly);
+      if (vidx >= 0) {
+        deleteVertex(active, vidx);
+        return;
+      }
+      insertPointOnNearestEdge(active, p.x, p.y, 999);
+    }
+
+    function finishOutline() {
+      if (outlinePoints.length < 3) return;
+      applyPolygon(outlinePoints.map((p) => [p[0], p[1]]));
+      setOutlineMode(false);
+    }
+
+    canvas.oncontextmenu = (e) => {
+      e.preventDefault();
+      handleShapeRightClick(e);
+    };
+
+    canvas.onpointerdown = (e) => {
+      if (e.button === 2) {
+        e.preventDefault();
+        handleShapeRightClick(e);
+        return;
+      }
+      const p = toScene(e.clientX, e.clientY);
+      const hit = hitTestAt(p.x, p.y);
+
+      if (outlineMode && selectedId) {
+        outlinePoints.push(clampScene(p.x, p.y));
+        draw();
+        return;
+      }
+
+      if (hit && hit.id !== selectedId) {
+        selectObject(hit.id, { scroll: true });
+      }
+
+      const active = board.objects.find((obj) => obj.id === (hit?.id ?? selectedId));
+      if (!active) return;
+
+      if (addPointMode && active.configured) {
+        if (insertPointOnNearestEdge(active, p.x, p.y, 999)) setAddPointMode(false);
+        return;
+      }
+
+      if (active.configured) {
+        const poly = ensurePolygon(active.bounds);
+        const idx = vertexAt(p.x, p.y, poly);
+        if (idx >= 0) {
+          if (e.altKey) {
+            deleteVertex(active, idx);
+            return;
+          }
+          selectedVertex = idx;
+          vertexDrag = { idx };
+          pushHistory();
+          canvas.setPointerCapture(e.pointerId);
+          draw();
+          return;
+        }
+        if (hit) return;
+      }
+
+      if (!selectedId) return;
+
+      selectedVertex = null;
+      pushHistory();
+      drag = { x0: p.x, y0: p.y, x1: p.x, y1: p.y };
+      canvas.setPointerCapture(e.pointerId);
+    };
+
+    canvas.onpointermove = (e) => {
+      const p = toScene(e.clientX, e.clientY);
+      if (outlineMode) {
+        outlineCursor = clampScene(p.x, p.y);
+        draw();
+        return;
+      }
+      if (!vertexDrag && !drag) {
+        const hover = hitTestAt(p.x, p.y);
+        canvas.style.cursor = hover ? 'pointer' : 'crosshair';
+      }
+      if (vertexDrag && selectedId) {
+        const o = board.objects.find((obj) => obj.id === selectedId);
+        if (!o?.configured) return;
+        const poly = ensurePolygon(o.bounds).map((pt) => [pt[0], pt[1]]);
+        poly[vertexDrag.idx] = clampScene(p.x, p.y);
+        o.bounds.polygon = poly;
+        syncAabb(o.bounds);
+        persistBoard();
+        renderList();
+        draw();
+        return;
+      }
+      if (!drag) return;
+      drag.x1 = p.x; drag.y1 = p.y;
+      draw();
+    };
+
+    canvas.ondblclick = (e) => {
+      const p = toScene(e.clientX, e.clientY);
+      const hit = hitTestAt(p.x, p.y);
+      if (hit) selectObject(hit.id);
+      if (outlineMode || addPointMode) return;
+      const o = board.objects.find((obj) => obj.id === (hit?.id ?? selectedId));
+      if (!o?.configured) return;
+      insertPointOnNearestEdge(o, p.x, p.y);
+    };
+
+    canvas.onpointerup = () => {
+      if (vertexDrag) {
+        vertexDrag = null;
+        canvas.style.cursor = 'crosshair';
+        updateStats();
+        return;
+      }
+      if (!drag || !selectedId || outlineMode) return;
+      const x = Math.min(drag.x0, drag.x1), y = Math.min(drag.y0, drag.y1);
+      const w = Math.abs(drag.x1 - drag.x0), h = Math.abs(drag.y1 - drag.y0);
+      drag = null;
+      canvas.style.cursor = 'crosshair';
+      if (w < 6 || h < 6) return;
+      applyRect(x, y, w, h);
+    };
+
+    document.getElementById('filters').onclick = (e) => {
+      const btn = e.target.closest('button[data-filter]');
+      if (!btn) return;
+      filter = btn.dataset.filter;
+      document.querySelectorAll('.filters button').forEach((b) => b.classList.toggle('active', b === btn));
+      renderList();
+    };
+
+    document.getElementById('clearBox').onclick = clearSelectedBox;
+    document.getElementById('addPointBtn').onclick = () => {
+      if (!selectedId) return;
+      setAddPointMode(!addPointMode);
+    };
+    document.getElementById('outlineBtn').onclick = () => {
+      if (!selectedId) return;
+      setOutlineMode(!outlineMode);
+    };
+    document.getElementById('finishOutlineBtn').onclick = finishOutline;
+
+    document.getElementById('exportJson').onclick = () => {
+      const objects = board.objects
+        .filter((o) => o.configured)
+        .map(serializeObject);
+      const payload = {
+        boardId: board.id,
+        version: 2,
+        objects,
+        removedIds: board.removedIds || [],
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `hit-areas-${board.id}.json`;
+      a.click();
+      document.getElementById('output').value = JSON.stringify(payload, null, 2);
+    };
+
+    function shapeExtra(o) {
+      const parts = [];
+      if (o.evidence) parts.push('evidence: true');
+      const poly = ensurePolygon(o.bounds);
+      if (poly) parts.push(`polygon: ${JSON.stringify(poly)}`);
+      if (o.displayName?.trim()) parts.push(`displayName: ${JSON.stringify(o.displayName.trim())}`);
+      return parts.length ? `, { ${parts.join(', ')} }` : '';
+    }
+
+    function tsSpecial(id, labelKey, b, displayName) {
+      const poly = b.polygon;
+      let call = `special('${id}', '${labelKey}', ${b.x}, ${b.y}, ${b.width}, ${b.height}`;
+      if (poly) call += `, ${JSON.stringify(poly)}`;
+      else if (displayName) call += `, undefined`;
+      if (displayName) call += `, ${JSON.stringify(displayName)}`;
+      return call + '),';
+    }
+
+    function tsLine(o) {
+      const b = exportBounds(o.bounds);
+      const display = o.displayName?.trim() || '';
+      const role = roleOf(o);
+      if (role === 'fragment') {
+        return tsSpecial('special_map_fragment', 'collectibles.map_fragment', b, display);
+      }
+      if (role === 'collectible') {
+        return tsSpecial('special_brass_token', 'collectibles.brass_token', b, display);
+      }
+      if (role === 'brakeman') {
+        const poly = b.polygon ? `, ${JSON.stringify(b.polygon)}` : '';
+        return `brakeman(${b.x}, ${b.y}, ${b.width}, ${b.height}${poly}),`;
+      }
+      return `pool('${o.id}', '${o.labelKey}', ${b.x}, ${b.y}, ${b.width}, ${b.height}${shapeExtra(o)}),`;
+    }
+
+    document.getElementById('copyTs').onclick = () => {
+      const lines = board.objects.filter((o) => o.configured).map(tsLine).join('\n');
+      document.getElementById('output').value = lines;
+      navigator.clipboard?.writeText(lines);
+    };
+
+    document.getElementById('undoBtn').onclick = () => undo();
+    document.getElementById('redoBtn').onclick = () => redo();
+
+    document.getElementById('objName').onfocus = () => {
+      nameHistoryPushed = false;
+    };
+
+    document.getElementById('objName').oninput = (e) => {
+      const o = board.objects.find((obj) => obj.id === selectedId);
+      if (!o) return;
+      if (!nameHistoryPushed) {
+        pushHistory();
+        nameHistoryPushed = true;
+      }
+      o.displayName = e.target.value;
+      persistBoard();
+      renderList();
+    };
+
+    document.getElementById('objRole').onchange = (e) => {
+      const o = board.objects.find((obj) => obj.id === selectedId);
+      if (!o) return;
+      pushHistory();
+      const prevId = o.id;
+      applyRole(o, e.target.value);
+      if (selectedId === prevId) selectedId = o.id;
+      persistBoard();
+      renderList();
+      syncObjectEditor();
+      draw();
+    };
+
+    document.getElementById('addObjectBtn').onclick = () => {
+      pushHistory();
+      const n = board.objects.filter((o) => o.id.startsWith('obj_custom_')).length + 1;
+      const id = `obj_custom_${n}`;
+      const obj = {
+        id,
+        labelKey: `objects.custom_${n}`,
+        displayName: `New object ${n}`,
+        type: 'standard',
+        collectibleRole: 'standard',
+        bounds: { x: 0, y: 0, width: 0, height: 0 },
+        configured: false,
+        evidence: false,
+      };
+      board.objects.push(obj);
+      selectedId = id;
+      persistBoard();
+      renderList();
+      syncObjectEditor();
+      updateToolbar();
+      draw();
+    };
+
+    document.getElementById('removeObjectBtn').onclick = () => removeSelectedObject();
+
+    document.getElementById('importJson').onclick = () => {
+      document.getElementById('importFile').click();
+    };
+
+    document.getElementById('importFile').onchange = async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      try {
+        const parsed = JSON.parse(await file.text());
+        if (parsed.boardId && parsed.boardId !== board.id) {
+          if (!confirm(`JSON is for ${parsed.boardId}, but you are editing ${board.id}. Import anyway?`)) return;
+        }
+        const items = parsed.version === 2 && Array.isArray(parsed.objects)
+          ? parsed.objects
+          : Object.entries(parsed.hits || {}).map(([id, bounds]) => ({ id, bounds, configured: true }));
+        pushHistory();
+        for (const item of items) {
+          const hydrated = hydrateObject(item);
+          const idx = board.objects.findIndex((o) => o.id === hydrated.id);
+          if (idx >= 0) board.objects[idx] = { ...board.objects[idx], ...hydrated };
+          else board.objects.push(hydrated);
+        }
+        if (Array.isArray(parsed.removedIds)) {
+          board.removedIds = [...new Set(parsed.removedIds)];
+          board.objects = board.objects.filter((o) => !board.removedIds.includes(o.id));
+        }
+        persistBoard();
+        renderList();
+        updateStats();
+        draw();
+      } catch (err) {
+        alert('Could not import JSON: ' + err.message);
+      }
+      e.target.value = '';
+    };
+
+    window.onresize = resize;
+    window.onkeydown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
+        e.preventDefault();
+        undo();
+        return;
+      }
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'y' || (e.key === 'z' && e.shiftKey))) {
+        e.preventDefault();
+        redo();
+        return;
+      }
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+      if (e.key === 'Escape') {
+        if (outlineMode) setOutlineMode(false);
+        else if (addPointMode) setAddPointMode(false);
+        else selectedVertex = null;
+        draw();
+        return;
+      }
+      if (e.key === 'Enter' && outlineMode) {
+        e.preventDefault();
+        finishOutline();
+        return;
+      }
+      if (e.key === 'Delete' || e.key === 'Backspace') {
+        const o = board.objects.find((obj) => obj.id === selectedId);
+        if (o?.configured && selectedVertex != null) {
+          e.preventDefault();
+          deleteVertex(o, selectedVertex);
+          return;
+        }
+        if (selectedId && o) {
+          e.preventDefault();
+          removeSelectedObject();
+        }
+      }
+    };
+
+    loadData();
+  </script>
+</body>
+</html>
