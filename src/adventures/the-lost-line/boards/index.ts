@@ -1,6 +1,7 @@
 import type { BoardDefinition, HitBounds, ScenePoint } from '@engine/types';
 import { ch01Board01Pool } from './pools/ch01_board01';
 import { ch01Board02Pool } from './pools/ch01_board02';
+import { ch02Board02Pool } from './pools/ch02_board02';
 
 const BG = '/adventures/the-lost-line/backgrounds/boards';
 
@@ -91,9 +92,9 @@ export const ch01Boards = [
     background: boardBg('ch01_board02', 'png'),
     objects: [
       ...ch01Board02Pool,
-      special('special_map_fragment', 'collectibles.map_fragment', 1203, 413, 112, 218, [[1203,413],[1271,439],[1315,494],[1293,631],[1232,570]]),
-      special('special_brass_token', 'collectibles.brass_token', 1527, 840, 47, 19, [[1527,840],[1574,840],[1574,859],[1527,859]]),
-      brakeman(669, 643, 180, 118, [[669,643],[751,648],[849,761],[669,761]]),
+      special('special_map_fragment', 'collectibles.map_fragment', 978, 816, 116, 96, [[980,816],[1080,820],[1094,872],[1058,912],[990,896],[978,852]]),
+      special('special_brass_token', 'collectibles.brass_token', 1356, 930, 48, 44, [[1366,930],[1394,930],[1404,942],[1404,962],[1394,974],[1366,974],[1356,962],[1356,942]]),
+      brakeman(760, 742, 158, 116, [[770,748],[884,742],[918,790],[902,846],[836,858],[776,840],[760,792]]),
     ],
   },
   {
@@ -144,19 +145,10 @@ export const ch02Boards = [
     chapterId: 'ch02',
     background: boardBg('ch02_board02', 'png'),
     objects: [
-      std('obj_music_stand', 'objects.music_stand', 340, 560),
-      std('obj_bow_rosin', 'objects.bow_rosin', 520, 720, 36, 36),
-      std('obj_sheet_music', 'objects.sheet_music', 700, 480, 48, 56),
-      std('obj_busker_hat', 'objects.busker_hat', 920, 640),
-      std('obj_subway_grate', 'objects.subway_grate', 1080, 820, 64, 32),
-      std('obj_loose_string', 'objects.loose_string', 1240, 580, 40, 24),
-      std('obj_metronome', 'objects.metronome', 1420, 500),
-      std('obj_ticket_stub', 'objects.ticket_stub', 1600, 700, 40, 28),
-      std('obj_street_lamp', 'objects.street_lamp', 1800, 360, 48, 80),
-      std('obj_chalk_mark', 'objects.chalk_mark', 460, 380, 32, 32),
-      special('special_map_fragment', 'collectibles.map_fragment', 1680, 440),
-      special('special_brass_token', 'collectibles.brass_token', 1120, 380),
-      brakeman(640, 860),
+      ...ch02Board02Pool,
+      special('special_map_fragment', 'collectibles.map_fragment', 1376, 588, 116, 94, [[1384,600],[1470,588],[1492,636],[1468,682],[1398,672],[1376,628]]),
+      special('special_brass_token', 'collectibles.brass_token', 1298, 906, 48, 44, [[1308,906],[1336,906],[1346,918],[1346,938],[1336,950],[1308,950],[1298,938],[1298,918]]),
+      brakeman(612, 710, 174, 138, [[636,724],[742,710],[786,756],[772,824],[706,848],[640,830],[612,778]]),
     ],
   },
   {

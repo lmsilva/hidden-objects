@@ -24,13 +24,14 @@ function pool(
 }
 
 export const ch01Board02Pool: BoardObject[] = [
-  pool('obj_bench_plaque', 'objects.bench_plaque', 393, 607, 189, 52, { polygon: [[393,610],[568,607],[582,649],[399,659]] }),
-  pool('obj_vending_snack', 'objects.vending_snack', 851, 791, 109, 126, { polygon: [[851,791],[960,791],[960,917],[851,917]] }),
-  pool('obj_loose_button', 'objects.loose_button', 381, 981, 56, 32, { polygon: [[381,981],[437,981],[437,1013],[381,1013]], displayName: 'Cigarettes' }),
-  pool('obj_newspaper', 'objects.newspaper', 470, 841, 227, 154, { polygon: [[470,852],[616,841],[649,933],[697,948],[545,995],[483,967]] }),
-  pool('obj_enamel_sign', 'objects.enamel_sign', 275, 155, 180, 122, { polygon: [[275,155],[455,155],[455,277],[275,277]] }),
-  pool('obj_coin', 'objects.coin', 1320, 880, 28, 28),
-  pool('obj_schedule_poster', 'objects.schedule_poster', 1370, 309, 129, 249, { polygon: [[1370,309],[1499,327],[1497,557],[1370,558]] }),
-  pool('obj_glove', 'objects.glove', 561, 735, 106, 62, { polygon: [[561,735],[667,735],[667,797],[561,797]] }),
-  pool('obj_token_slot', 'objects.token_slot', 347, 648, 34, 37, { polygon: [[347,648],[381,648],[381,685],[347,685]] }),
+  pool('obj_enamel_sign', 'objects.enamel_sign', 470, 150, 220, 130, { polygon: [[470,150],[690,150],[690,280],[470,280]], displayName: "Enamel Sign" }),
+  pool('obj_schedule_poster', 'objects.schedule_poster', 1040, 170, 170, 282, { polygon: [[1040,170],[1210,170],[1210,452],[1040,452]], displayName: "Schedule Poster" }),
+  pool('obj_vending_snack', 'objects.vending_snack', 210, 410, 86, 110, { polygon: [[210,410],[296,410],[296,520],[210,520]], displayName: "Vending Snack" }),
+  pool('obj_token_slot', 'objects.token_slot', 300, 596, 62, 66, { polygon: [[300,596],[362,596],[362,662],[300,662]], displayName: "Token Slot" }),
+  pool('obj_bench_plaque', 'objects.bench_plaque', 612, 610, 132, 40, { polygon: [[612,610],[744,610],[744,650],[612,650]], displayName: "Bench Plaque" }),
+  pool('obj_lost_scarf', 'objects.lost_scarf', 496, 688, 130, 54, { polygon: [[496,688],[626,688],[626,742],[496,742]], displayName: "Lost Scarf" }),
+  pool('obj_newspaper', 'objects.newspaper', 660, 680, 132, 62, { polygon: [[660,680],[792,680],[792,742],[660,742]], displayName: "Newspaper" }),
+  pool('obj_glove', 'objects.glove', 812, 690, 88, 48, { polygon: [[812,690],[900,690],[900,738],[812,738]], displayName: "Glove" }),
+  pool('obj_loose_button', 'objects.loose_button', 556, 902, 46, 38, { polygon: [[556,902],[602,902],[602,940],[556,940]], displayName: "Loose Button" }),
+  pool('obj_coin', 'objects.coin', 1184, 980, 38, 36, { polygon: [[1184,980],[1222,980],[1222,1016],[1184,1016]], displayName: "Coin" }),
 ];

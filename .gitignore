@@ -20,6 +20,9 @@ Thumbs.db
 npm-debug.log*
 tools/assets-cache/
 
+# Procedural board generator intermediates (regenerable)
+tools/_generated/
+
 # Source asset zips (re-download via npm run assets:setup; some exceed GitHub's 100MB limit)
 public/zipped_asset_downloads/
 

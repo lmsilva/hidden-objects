@@ -753,112 +753,34 @@
       "targetPoolSize": 30,
       "objects": [
         {
-          "id": "obj_bench_plaque",
-          "labelKey": "objects.bench_plaque",
-          "displayName": "Bench Plaque",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 260,
-            "y": 680,
-            "width": 44,
-            "height": 44
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_vending_snack",
-          "labelKey": "objects.vending_snack",
-          "displayName": "Vending Snack",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 480,
-            "y": 520,
-            "width": 44,
-            "height": 44
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_loose_button",
-          "labelKey": "objects.loose_button",
-          "displayName": "Loose Button",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 620,
-            "y": 820,
-            "width": 32,
-            "height": 32
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_newspaper",
-          "labelKey": "objects.newspaper",
-          "displayName": "Newspaper",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 800,
-            "y": 760,
-            "width": 56,
-            "height": 40
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
           "id": "obj_enamel_sign",
           "labelKey": "objects.enamel_sign",
           "displayName": "Enamel Sign",
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 1020,
-            "y": 340,
-            "width": 44,
-            "height": 44
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_lost_scarf",
-          "labelKey": "objects.lost_scarf",
-          "displayName": "Lost Scarf",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 1180,
-            "y": 640,
-            "width": 44,
-            "height": 44
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_coin",
-          "labelKey": "objects.coin",
-          "displayName": "Coin",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 1320,
-            "y": 880,
-            "width": 28,
-            "height": 28
+            "x": 470,
+            "y": 150,
+            "width": 220,
+            "height": 130,
+            "polygon": [
+              [
+                470,
+                150
+              ],
+              [
+                690,
+                150
+              ],
+              [
+                690,
+                280
+              ],
+              [
+                470,
+                280
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -871,26 +793,62 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 1480,
-            "y": 400,
-            "width": 48,
-            "height": 64
+            "x": 1040,
+            "y": 170,
+            "width": 170,
+            "height": 282,
+            "polygon": [
+              [
+                1040,
+                170
+              ],
+              [
+                1210,
+                170
+              ],
+              [
+                1210,
+                452
+              ],
+              [
+                1040,
+                452
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
           "lostProperty": false
         },
         {
-          "id": "obj_glove",
-          "labelKey": "objects.glove",
-          "displayName": "Glove",
+          "id": "obj_vending_snack",
+          "labelKey": "objects.vending_snack",
+          "displayName": "Vending Snack",
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 1680,
-            "y": 600,
-            "width": 44,
-            "height": 44
+            "x": 210,
+            "y": 410,
+            "width": 86,
+            "height": 110,
+            "polygon": [
+              [
+                210,
+                410
+              ],
+              [
+                296,
+                410
+              ],
+              [
+                296,
+                520
+              ],
+              [
+                210,
+                520
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -904,9 +862,231 @@
           "collectibleRole": "standard",
           "bounds": {
             "x": 300,
-            "y": 440,
-            "width": 44,
-            "height": 44
+            "y": 596,
+            "width": 62,
+            "height": 66,
+            "polygon": [
+              [
+                300,
+                596
+              ],
+              [
+                362,
+                596
+              ],
+              [
+                362,
+                662
+              ],
+              [
+                300,
+                662
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_bench_plaque",
+          "labelKey": "objects.bench_plaque",
+          "displayName": "Bench Plaque",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 612,
+            "y": 610,
+            "width": 132,
+            "height": 40,
+            "polygon": [
+              [
+                612,
+                610
+              ],
+              [
+                744,
+                610
+              ],
+              [
+                744,
+                650
+              ],
+              [
+                612,
+                650
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_lost_scarf",
+          "labelKey": "objects.lost_scarf",
+          "displayName": "Lost Scarf",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 496,
+            "y": 688,
+            "width": 130,
+            "height": 54,
+            "polygon": [
+              [
+                496,
+                688
+              ],
+              [
+                626,
+                688
+              ],
+              [
+                626,
+                742
+              ],
+              [
+                496,
+                742
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_newspaper",
+          "labelKey": "objects.newspaper",
+          "displayName": "Newspaper",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 660,
+            "y": 680,
+            "width": 132,
+            "height": 62,
+            "polygon": [
+              [
+                660,
+                680
+              ],
+              [
+                792,
+                680
+              ],
+              [
+                792,
+                742
+              ],
+              [
+                660,
+                742
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_glove",
+          "labelKey": "objects.glove",
+          "displayName": "Glove",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 812,
+            "y": 690,
+            "width": 88,
+            "height": 48,
+            "polygon": [
+              [
+                812,
+                690
+              ],
+              [
+                900,
+                690
+              ],
+              [
+                900,
+                738
+              ],
+              [
+                812,
+                738
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_loose_button",
+          "labelKey": "objects.loose_button",
+          "displayName": "Loose Button",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 556,
+            "y": 902,
+            "width": 46,
+            "height": 38,
+            "polygon": [
+              [
+                556,
+                902
+              ],
+              [
+                602,
+                902
+              ],
+              [
+                602,
+                940
+              ],
+              [
+                556,
+                940
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_coin",
+          "labelKey": "objects.coin",
+          "displayName": "Coin",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1184,
+            "y": 980,
+            "width": 38,
+            "height": 36,
+            "polygon": [
+              [
+                1184,
+                980
+              ],
+              [
+                1222,
+                980
+              ],
+              [
+                1222,
+                1016
+              ],
+              [
+                1184,
+                1016
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -919,10 +1099,36 @@
           "type": "special",
           "collectibleRole": "fragment",
           "bounds": {
-            "x": 1720,
-            "y": 320,
-            "width": 52,
-            "height": 52
+            "x": 978,
+            "y": 816,
+            "width": 116,
+            "height": 96,
+            "polygon": [
+              [
+                980,
+                816
+              ],
+              [
+                1080,
+                820
+              ],
+              [
+                1094,
+                872
+              ],
+              [
+                1058,
+                912
+              ],
+              [
+                990,
+                896
+              ],
+              [
+                978,
+                852
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -935,10 +1141,44 @@
           "type": "special",
           "collectibleRole": "collectible",
           "bounds": {
-            "x": 920,
-            "y": 480,
-            "width": 52,
-            "height": 52
+            "x": 1356,
+            "y": 930,
+            "width": 48,
+            "height": 44,
+            "polygon": [
+              [
+                1366,
+                930
+              ],
+              [
+                1394,
+                930
+              ],
+              [
+                1404,
+                942
+              ],
+              [
+                1404,
+                962
+              ],
+              [
+                1394,
+                974
+              ],
+              [
+                1366,
+                974
+              ],
+              [
+                1356,
+                962
+              ],
+              [
+                1356,
+                942
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -951,10 +1191,40 @@
           "type": "easter_egg",
           "collectibleRole": "brakeman",
           "bounds": {
-            "x": 560,
-            "y": 900,
-            "width": 40,
-            "height": 40
+            "x": 760,
+            "y": 742,
+            "width": 158,
+            "height": 116,
+            "polygon": [
+              [
+                770,
+                748
+              ],
+              [
+                884,
+                742
+              ],
+              [
+                918,
+                790
+              ],
+              [
+                902,
+                846
+              ],
+              [
+                836,
+                858
+              ],
+              [
+                776,
+                840
+              ],
+              [
+                760,
+                792
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1410,10 +1680,86 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 340,
-            "y": 560,
-            "width": 44,
-            "height": 44
+            "x": 470,
+            "y": 430,
+            "width": 190,
+            "height": 416,
+            "polygon": [
+              [
+                470,
+                430
+              ],
+              [
+                660,
+                430
+              ],
+              [
+                660,
+                512
+              ],
+              [
+                588,
+                512
+              ],
+              [
+                596,
+                792
+              ],
+              [
+                642,
+                846
+              ],
+              [
+                566,
+                816
+              ],
+              [
+                492,
+                846
+              ],
+              [
+                538,
+                792
+              ],
+              [
+                546,
+                512
+              ],
+              [
+                470,
+                512
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_metronome",
+          "labelKey": "objects.metronome",
+          "displayName": "Metronome",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 382,
+            "y": 700,
+            "width": 92,
+            "height": 100,
+            "polygon": [
+              [
+                428,
+                700
+              ],
+              [
+                474,
+                800
+              ],
+              [
+                382,
+                800
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1426,10 +1772,28 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 520,
-            "y": 720,
-            "width": 36,
-            "height": 36
+            "x": 300,
+            "y": 810,
+            "width": 56,
+            "height": 44,
+            "polygon": [
+              [
+                300,
+                816
+              ],
+              [
+                352,
+                810
+              ],
+              [
+                356,
+                850
+              ],
+              [
+                304,
+                854
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1442,10 +1806,28 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 700,
-            "y": 480,
-            "width": 48,
-            "height": 56
+            "x": 604,
+            "y": 858,
+            "width": 166,
+            "height": 72,
+            "polygon": [
+              [
+                604,
+                872
+              ],
+              [
+                748,
+                858
+              ],
+              [
+                770,
+                902
+              ],
+              [
+                626,
+                930
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1458,10 +1840,36 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 920,
-            "y": 640,
-            "width": 44,
-            "height": 44
+            "x": 838,
+            "y": 820,
+            "width": 166,
+            "height": 90,
+            "polygon": [
+              [
+                864,
+                820
+              ],
+              [
+                978,
+                820
+              ],
+              [
+                1004,
+                862
+              ],
+              [
+                936,
+                910
+              ],
+              [
+                862,
+                900
+              ],
+              [
+                838,
+                860
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1474,10 +1882,28 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 1080,
-            "y": 820,
-            "width": 64,
-            "height": 32
+            "x": 980,
+            "y": 872,
+            "width": 210,
+            "height": 90,
+            "polygon": [
+              [
+                980,
+                880
+              ],
+              [
+                1180,
+                872
+              ],
+              [
+                1190,
+                952
+              ],
+              [
+                990,
+                962
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1491,25 +1917,27 @@
           "collectibleRole": "standard",
           "bounds": {
             "x": 1240,
-            "y": 580,
-            "width": 40,
-            "height": 24
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_metronome",
-          "labelKey": "objects.metronome",
-          "displayName": "Metronome",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 1420,
-            "y": 500,
-            "width": 44,
-            "height": 44
+            "y": 770,
+            "width": 82,
+            "height": 42,
+            "polygon": [
+              [
+                1240,
+                776
+              ],
+              [
+                1320,
+                770
+              ],
+              [
+                1322,
+                810
+              ],
+              [
+                1244,
+                812
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1522,26 +1950,28 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 1600,
-            "y": 700,
-            "width": 40,
-            "height": 28
-          },
-          "configured": true,
-          "evidence": false,
-          "lostProperty": false
-        },
-        {
-          "id": "obj_street_lamp",
-          "labelKey": "objects.street_lamp",
-          "displayName": "Street Lamp",
-          "type": "standard",
-          "collectibleRole": "standard",
-          "bounds": {
-            "x": 1800,
-            "y": 360,
-            "width": 48,
-            "height": 80
+            "x": 1430,
+            "y": 812,
+            "width": 74,
+            "height": 40,
+            "polygon": [
+              [
+                1430,
+                818
+              ],
+              [
+                1500,
+                812
+              ],
+              [
+                1504,
+                848
+              ],
+              [
+                1434,
+                852
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1554,10 +1984,82 @@
           "type": "standard",
           "collectibleRole": "standard",
           "bounds": {
-            "x": 460,
-            "y": 380,
-            "width": 32,
-            "height": 32
+            "x": 300,
+            "y": 300,
+            "width": 110,
+            "height": 110,
+            "polygon": [
+              [
+                300,
+                300
+              ],
+              [
+                410,
+                300
+              ],
+              [
+                410,
+                410
+              ],
+              [
+                300,
+                410
+              ]
+            ]
+          },
+          "configured": true,
+          "evidence": false,
+          "lostProperty": false
+        },
+        {
+          "id": "obj_street_lamp",
+          "labelKey": "objects.street_lamp",
+          "displayName": "Street Lamp",
+          "type": "standard",
+          "collectibleRole": "standard",
+          "bounds": {
+            "x": 1704,
+            "y": 300,
+            "width": 104,
+            "height": 430,
+            "polygon": [
+              [
+                1704,
+                300
+              ],
+              [
+                1808,
+                300
+              ],
+              [
+                1808,
+                360
+              ],
+              [
+                1780,
+                408
+              ],
+              [
+                1772,
+                730
+              ],
+              [
+                1742,
+                730
+              ],
+              [
+                1750,
+                408
+              ],
+              [
+                1722,
+                360
+              ],
+              [
+                1704,
+                360
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1570,10 +2072,36 @@
           "type": "special",
           "collectibleRole": "fragment",
           "bounds": {
-            "x": 1680,
-            "y": 440,
-            "width": 52,
-            "height": 52
+            "x": 1376,
+            "y": 588,
+            "width": 116,
+            "height": 94,
+            "polygon": [
+              [
+                1384,
+                600
+              ],
+              [
+                1470,
+                588
+              ],
+              [
+                1492,
+                636
+              ],
+              [
+                1468,
+                682
+              ],
+              [
+                1398,
+                672
+              ],
+              [
+                1376,
+                628
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1586,10 +2114,44 @@
           "type": "special",
           "collectibleRole": "collectible",
           "bounds": {
-            "x": 1120,
-            "y": 380,
-            "width": 52,
-            "height": 52
+            "x": 1298,
+            "y": 906,
+            "width": 48,
+            "height": 44,
+            "polygon": [
+              [
+                1308,
+                906
+              ],
+              [
+                1336,
+                906
+              ],
+              [
+                1346,
+                918
+              ],
+              [
+                1346,
+                938
+              ],
+              [
+                1336,
+                950
+              ],
+              [
+                1308,
+                950
+              ],
+              [
+                1298,
+                938
+              ],
+              [
+                1298,
+                918
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,
@@ -1602,10 +2164,40 @@
           "type": "easter_egg",
           "collectibleRole": "brakeman",
           "bounds": {
-            "x": 640,
-            "y": 860,
-            "width": 40,
-            "height": 40
+            "x": 612,
+            "y": 710,
+            "width": 174,
+            "height": 138,
+            "polygon": [
+              [
+                636,
+                724
+              ],
+              [
+                742,
+                710
+              ],
+              [
+                786,
+                756
+              ],
+              [
+                772,
+                824
+              ],
+              [
+                706,
+                848
+              ],
+              [
+                640,
+                830
+              ],
+              [
+                612,
+                778
+              ]
+            ]
           },
           "configured": true,
           "evidence": false,

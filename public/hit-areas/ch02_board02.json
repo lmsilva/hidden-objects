@@ -10,10 +10,85 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 340,
-        "y": 560,
-        "width": 44,
-        "height": 44
+        "x": 470,
+        "y": 430,
+        "width": 190,
+        "height": 416,
+        "polygon": [
+          [
+            470,
+            430
+          ],
+          [
+            660,
+            430
+          ],
+          [
+            660,
+            512
+          ],
+          [
+            588,
+            512
+          ],
+          [
+            596,
+            792
+          ],
+          [
+            642,
+            846
+          ],
+          [
+            566,
+            816
+          ],
+          [
+            492,
+            846
+          ],
+          [
+            538,
+            792
+          ],
+          [
+            546,
+            512
+          ],
+          [
+            470,
+            512
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_metronome",
+      "labelKey": "objects.metronome",
+      "displayName": "Metronome",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 382,
+        "y": 700,
+        "width": 92,
+        "height": 100,
+        "polygon": [
+          [
+            428,
+            700
+          ],
+          [
+            474,
+            800
+          ],
+          [
+            382,
+            800
+          ]
+        ]
       },
       "configured": true
     },
@@ -25,10 +100,28 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 520,
-        "y": 720,
-        "width": 36,
-        "height": 36
+        "x": 300,
+        "y": 810,
+        "width": 56,
+        "height": 44,
+        "polygon": [
+          [
+            300,
+            816
+          ],
+          [
+            352,
+            810
+          ],
+          [
+            356,
+            850
+          ],
+          [
+            304,
+            854
+          ]
+        ]
       },
       "configured": true
     },
@@ -40,10 +133,28 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 700,
-        "y": 480,
-        "width": 48,
-        "height": 56
+        "x": 604,
+        "y": 858,
+        "width": 166,
+        "height": 72,
+        "polygon": [
+          [
+            604,
+            872
+          ],
+          [
+            748,
+            858
+          ],
+          [
+            770,
+            902
+          ],
+          [
+            626,
+            930
+          ]
+        ]
       },
       "configured": true
     },
@@ -55,10 +166,36 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 920,
-        "y": 640,
-        "width": 44,
-        "height": 44
+        "x": 838,
+        "y": 820,
+        "width": 166,
+        "height": 90,
+        "polygon": [
+          [
+            864,
+            820
+          ],
+          [
+            978,
+            820
+          ],
+          [
+            1004,
+            862
+          ],
+          [
+            936,
+            910
+          ],
+          [
+            862,
+            900
+          ],
+          [
+            838,
+            860
+          ]
+        ]
       },
       "configured": true
     },
@@ -70,10 +207,28 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 1080,
-        "y": 820,
-        "width": 64,
-        "height": 32
+        "x": 980,
+        "y": 872,
+        "width": 210,
+        "height": 90,
+        "polygon": [
+          [
+            980,
+            880
+          ],
+          [
+            1180,
+            872
+          ],
+          [
+            1190,
+            952
+          ],
+          [
+            990,
+            962
+          ]
+        ]
       },
       "configured": true
     },
@@ -86,24 +241,27 @@
       "evidence": false,
       "bounds": {
         "x": 1240,
-        "y": 580,
-        "width": 40,
-        "height": 24
-      },
-      "configured": true
-    },
-    {
-      "id": "obj_metronome",
-      "labelKey": "objects.metronome",
-      "displayName": "Metronome",
-      "type": "standard",
-      "collectibleRole": "standard",
-      "evidence": false,
-      "bounds": {
-        "x": 1420,
-        "y": 500,
-        "width": 44,
-        "height": 44
+        "y": 770,
+        "width": 82,
+        "height": 42,
+        "polygon": [
+          [
+            1240,
+            776
+          ],
+          [
+            1320,
+            770
+          ],
+          [
+            1322,
+            810
+          ],
+          [
+            1244,
+            812
+          ]
+        ]
       },
       "configured": true
     },
@@ -115,25 +273,28 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 1600,
-        "y": 700,
-        "width": 40,
-        "height": 28
-      },
-      "configured": true
-    },
-    {
-      "id": "obj_street_lamp",
-      "labelKey": "objects.street_lamp",
-      "displayName": "Street Lamp",
-      "type": "standard",
-      "collectibleRole": "standard",
-      "evidence": false,
-      "bounds": {
-        "x": 1800,
-        "y": 360,
-        "width": 48,
-        "height": 80
+        "x": 1430,
+        "y": 812,
+        "width": 74,
+        "height": 40,
+        "polygon": [
+          [
+            1430,
+            818
+          ],
+          [
+            1500,
+            812
+          ],
+          [
+            1504,
+            848
+          ],
+          [
+            1434,
+            852
+          ]
+        ]
       },
       "configured": true
     },
@@ -145,10 +306,81 @@
       "collectibleRole": "standard",
       "evidence": false,
       "bounds": {
-        "x": 460,
-        "y": 380,
-        "width": 32,
-        "height": 32
+        "x": 300,
+        "y": 300,
+        "width": 110,
+        "height": 110,
+        "polygon": [
+          [
+            300,
+            300
+          ],
+          [
+            410,
+            300
+          ],
+          [
+            410,
+            410
+          ],
+          [
+            300,
+            410
+          ]
+        ]
+      },
+      "configured": true
+    },
+    {
+      "id": "obj_street_lamp",
+      "labelKey": "objects.street_lamp",
+      "displayName": "Street Lamp",
+      "type": "standard",
+      "collectibleRole": "standard",
+      "evidence": false,
+      "bounds": {
+        "x": 1704,
+        "y": 300,
+        "width": 104,
+        "height": 430,
+        "polygon": [
+          [
+            1704,
+            300
+          ],
+          [
+            1808,
+            300
+          ],
+          [
+            1808,
+            360
+          ],
+          [
+            1780,
+            408
+          ],
+          [
+            1772,
+            730
+          ],
+          [
+            1742,
+            730
+          ],
+          [
+            1750,
+            408
+          ],
+          [
+            1722,
+            360
+          ],
+          [
+            1704,
+            360
+          ]
+        ]
       },
       "configured": true
     },
@@ -160,10 +392,36 @@
       "collectibleRole": "fragment",
       "evidence": false,
       "bounds": {
-        "x": 1680,
-        "y": 440,
-        "width": 52,
-        "height": 52
+        "x": 1376,
+        "y": 588,
+        "width": 116,
+        "height": 94,
+        "polygon": [
+          [
+            1384,
+            600
+          ],
+          [
+            1470,
+            588
+          ],
+          [
+            1492,
+            636
+          ],
+          [
+            1468,
+            682
+          ],
+          [
+            1398,
+            672
+          ],
+          [
+            1376,
+            628
+          ]
+        ]
       },
       "configured": true
     },
@@ -175,10 +433,44 @@
       "collectibleRole": "collectible",
       "evidence": false,
       "bounds": {
-        "x": 1120,
-        "y": 380,
-        "width": 52,
-        "height": 52
+        "x": 1298,
+        "y": 906,
+        "width": 48,
+        "height": 44,
+        "polygon": [
+          [
+            1308,
+            906
+          ],
+          [
+            1336,
+            906
+          ],
+          [
+            1346,
+            918
+          ],
+          [
+            1346,
+            938
+          ],
+          [
+            1336,
+            950
+          ],
+          [
+            1308,
+            950
+          ],
+          [
+            1298,
+            938
+          ],
+          [
+            1298,
+            918
+          ]
+        ]
       },
       "configured": true
     },
@@ -190,10 +482,40 @@
       "collectibleRole": "brakeman",
       "evidence": false,
       "bounds": {
-        "x": 640,
-        "y": 860,
-        "width": 40,
-        "height": 40
+        "x": 612,
+        "y": 710,
+        "width": 174,
+        "height": 138,
+        "polygon": [
+          [
+            636,
+            724
+          ],
+          [
+            742,
+            710
+          ],
+          [
+            786,
+            756
+          ],
+          [
+            772,
+            824
+          ],
+          [
+            706,
+            848
+          ],
+          [
+            640,
+            830
+          ],
+          [
+            612,
+            778
+          ]
+        ]
       },
       "configured": true
     }
